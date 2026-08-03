@@ -680,7 +680,7 @@
           '</div>' +
           '<div class="skills">' + skills +
             '<div class="ba__legend" style="margin-top:.35rem">' +
-              '<span><i style="background:var(--navy-500)"></i> April baseline</span>' +
+              '<span><i style="background:var(--navy-500)"></i> May baseline</span>' +
               '<span><i style="background:var(--orange)"></i> Current</span>' +
             '</div>' +
           '</div>' +

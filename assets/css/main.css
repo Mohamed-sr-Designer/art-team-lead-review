@@ -805,11 +805,42 @@ strong, b { font-weight: 640; color: var(--navy); }
   box-shadow: var(--sh-1); transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
 .hl__c:hover { transform: translateY(-3px); box-shadow: var(--sh-3); }
-.hl__ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; margin-bottom: .3rem; }
-.hl__ico svg { width: 20px; height: 20px; }
-.hl__ico--time { background: var(--orange-050); color: var(--orange); border: 1px solid rgba(247,99,2,.24); }
-.hl__ico--warn { background: var(--bg-3); color: var(--navy-500); border: 1px solid var(--line-2); }
-.hl__tag { font-family: var(--font-mono); font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); }
+/* Alert icons. Severity is carried by colour and by a live ring, so the
+   three cards read as flags rather than as three neutral bullet points. */
+.hl__ico {
+  position: relative; width: 44px; height: 44px; border-radius: 13px;
+  display: grid; place-items: center; margin-bottom: .35rem;
+}
+.hl__ico svg { width: 21px; height: 21px; position: relative; z-index: 1; }
+.hl__ico::after {
+  content: ""; position: absolute; inset: -5px; border-radius: 17px;
+  border: 1.5px solid currentColor; opacity: .2;
+  animation: alertRing 2.8s var(--ease-io) infinite;
+}
+@keyframes alertRing {
+  0%, 100% { transform: scale(1);    opacity: .2; }
+  50%      { transform: scale(1.06); opacity: .05; }
+}
+.hl__ico--high { background: var(--orange-050); color: var(--orange); border: 1px solid rgba(247,99,2,.3); }
+.hl__ico--open { background: #FFF8E8; color: #B5730A; border: 1px solid rgba(181,115,10,.26); }
+.hl__ico--risk { background: var(--bg-3); color: var(--navy-500); border: 1px solid var(--line-2); }
+
+.hl__c { border-top: 3px solid transparent; }
+.hl__c--high { border-top-color: var(--orange); }
+.hl__c--open { border-top-color: #E5A21E; }
+.hl__c--risk { border-top-color: var(--navy-500); }
+
+.hl__tag {
+  display: inline-flex; align-items: center; gap: .42rem; align-self: start;
+  font-family: var(--font-mono); font-size: .56rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--text-3);
+  padding: .3rem .6rem; border-radius: 100px; border: 1px solid var(--line-2);
+  background: var(--bg-2);
+}
+.hl__tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+.hl__tag--high { color: var(--orange-600); background: var(--orange-050); border-color: rgba(247,99,2,.3); }
+.hl__tag--open { color: #B5730A; background: #FFF8E8; border-color: rgba(181,115,10,.28); }
+.hl__tag--risk { color: var(--navy-500); background: var(--bg-3); border-color: var(--line-2); }
 .hl__c h4 { font-size: 1.05rem; }
 .hl__c p { font-size: .865rem; line-height: 1.6; }
 .hl__ask {
