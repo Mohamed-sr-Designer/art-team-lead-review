@@ -21,9 +21,9 @@
       sector: 'Real Estate · KSA',
       badge: 'Al Rajhi United',
       pairs: 6,
-      changed: 'Replaced generic rendered imagery and a crowded logo lock-up with real aerial site photography, a CGI plot overlay, and a single governed headline hierarchy carrying one clear benefit strip.',
-      mattered: 'A land buyer is assessing whether the development is real and progressing. Stock-style renders signal a concept; verified site imagery signals construction underway.',
-      impact: 'Moves the account from awareness content to sales-enabling content — the same post now carries proof of delivery, plot inventory and location value in a single frame.'
+      changed: 'I dropped the stock render and used a real photo of the site from the air. I drew the plot lines on top of the photo, so the plan reads at a glance. I cleaned the logo row at the bottom and gave the page one clear first line.',
+      why: 'Buyers want proof that the project is real and moving. A real site photo says that. A render does not.',
+      skills: ['Composition', 'Photo research', 'Text layout', 'Retouch']
     },
     {
       slug: 'alrajhi-alrawda',
@@ -31,9 +31,9 @@
       sector: 'Real Estate · KSA',
       badge: 'Al Rajhi United',
       pairs: 3,
-      changed: 'Shifted from decorative exterior imagery to art-directed interior scenes with lived-in staging, a disciplined Arabic type hierarchy, and specification detail (unit area, family zoning) placed as the headline.',
-      mattered: 'Residential buyers convert on specifics, not atmosphere. Leading with the square-metre figure and family use-case answers the qualifying question before the enquiry.',
-      impact: 'Higher-intent enquiries. The creative now filters for serious buyers instead of generating traffic that account managers have to qualify manually.'
+      changed: 'I moved from outside shots to real interiors. I set the light warm and soft, and staged the room so it feels lived in. I moved the unit size up into the headline instead of hiding it in small text.',
+      why: 'People buy a home on facts. The size and the family space answer the first question before they call.',
+      skills: ['Lighting', 'Composition', 'Text layout', 'Art direction']
     },
     {
       slug: 'alrajhi-rabiet-elghad',
@@ -41,9 +41,9 @@
       sector: 'Real Estate · KSA',
       badge: 'Al Rajhi United',
       pairs: 3,
-      changed: 'Built a distinct sub-brand identity — its own wordmark treatment, colour discipline and premium environmental photography — so the project reads as an extension of a proven track record rather than a separate, unrelated launch.',
-      mattered: 'A new masterplan carries launch risk. Visually anchoring it to the developer\'s existing credibility transfers trust from a delivered project to an announced one.',
-      impact: 'Reduces the marketing cost of launching each new phase: the visual system is inherited, not rebuilt, and buyer confidence is borrowed from the previous development.'
+      changed: 'I built a look that belongs to this project: its own logo treatment, its own colour and its own photo mood. I kept it close enough to the older project so the two feel connected.',
+      why: 'A new project is a risk for the buyer. When it looks like the project that was already delivered, the trust moves across with it.',
+      skills: ['Art direction', 'Colour control', 'Text layout', 'Brand rules']
     },
     {
       slug: 'abaq',
@@ -51,9 +51,9 @@
       sector: 'Education · KSA',
       badge: 'Admissions',
       pairs: 3,
-      changed: 'Retired unedited event photography and default typography in favour of an owned brand system — fixed palette, dual-script headline hierarchy, art-directed classroom imagery and a standing call to action.',
-      mattered: 'Admissions is a trust purchase made by parents comparing institutions. The school\'s own communications are the first evidence of the standards it claims to hold.',
-      impact: 'Positions the school in the premium international tier during the admissions decision window, and gives the account a reusable template set instead of per-post design decisions.'
+      changed: 'I stopped using raw event photos. I picked clean classroom images and fixed the light and the colour on each one. I set one type style that works for Arabic and English together.',
+      why: 'Parents judge a school by how it looks before they visit. The post is the first proof of the quality the school claims.',
+      skills: ['Photo research', 'Retouch', 'Text layout', 'Colour control']
     },
     {
       slug: 'riad-elabdaa',
@@ -61,9 +61,9 @@
       sector: 'Education · KSA',
       badge: 'Brand System',
       pairs: 3,
-      changed: 'Introduced a consistent brand container — locked logo placement, a warm ownable palette, controlled Arabic type hierarchy and a highlight device for the key message — replacing layouts that changed with every post.',
-      mattered: 'Recognition compounds. When every post looks like a different school, each one has to earn attention from zero.',
-      impact: 'Cumulative brand recall across the admissions cycle, and a template system that lets a junior designer produce senior-standard output.'
+      changed: 'I locked the logo place, the colours and the text sizes. Every post now sits inside the same frame, so the designer starts from a system instead of a blank page.',
+      why: 'When the posts look the same, people start to remember the school. When every post looks different, each one starts from zero.',
+      skills: ['Brand rules', 'Text layout', 'Colour control', 'Time control']
     },
     {
       slug: 'dora',
@@ -71,29 +71,29 @@
       sector: 'Education · Admissions',
       badge: 'Campaign System',
       pairs: 3,
-      changed: 'Rebuilt admissions communication as a campaign system: one owned colour field, a single conceptual device carried across the flight, prominent accreditation marks, and message hierarchy that reads in under two seconds.',
-      mattered: 'Admissions campaigns run against a deadline. Accreditation and urgency are the two decision triggers, and both were previously buried.',
-      impact: 'Sharper conversion at the top of the admissions funnel, and a campaign structure that can be re-run each intake with content changes only.'
+      changed: 'I built one look for the whole admissions campaign: one colour field, one idea carried across every post, the accreditation logos made big, and a first line you can read in two seconds.',
+      why: 'Admissions runs against a deadline. The trust marks and the date are what make a parent act, so both have to be seen fast.',
+      skills: ['Composition', 'Text layout', 'Art direction', 'Time control']
     },
     {
       slug: 'gf',
       name: 'Guilt Free',
-      sector: 'F&B · Dessert Retail',
+      sector: 'Food · Dessert Retail',
       badge: 'Product Craft',
       pairs: 6,
-      changed: 'Replaced flat product cut-outs on empty backgrounds with directed product photography — single-hero composition, controlled lighting, ingredient staging and a bilingual product lock-up.',
-      mattered: 'In food retail the image is the product experience. Appetite appeal is the conversion mechanism, and cut-outs on white remove it.',
-      impact: 'Product posts now function as sales assets rather than announcements — directly supporting delivery-platform ordering, where the photograph is the entire proposition.'
+      changed: 'I stopped cutting the products out on a flat background. I shot one hero product with real light, real shadow and props around it, then retouched the texture so it looks fresh.',
+      why: 'In food, the photo is the product. If the photo does not make you hungry, the post does not sell anything.',
+      skills: ['Lighting', 'Composition', 'Retouch', 'Art direction']
     },
     {
       slug: 'boxaway',
       name: 'Boxaway',
       sector: 'Gourmet Gifting · KSA',
-      badge: 'Luxury Positioning',
+      badge: 'Luxury Look',
       pairs: 3,
-      changed: 'Moved to editorial-standard still life — fabric and tonal staging, controlled depth, restrained mark placement and a single ordering route — pricing the brand visually before a price is ever shown.',
-      mattered: 'Gifting is a status purchase. The perceived value of the product is set by the perceived value of the photograph.',
-      impact: 'Supports premium pricing and gift-occasion positioning, protecting margin instead of competing on discount.'
+      changed: 'I staged the product on fabric with soft directional light and controlled depth. I kept the logo small and left space around the food, so the frame feels calm and expensive.',
+      why: 'Gift buyers pay more when the photo looks expensive. The photo sets the price in their head before they see the price.',
+      skills: ['Lighting', 'Composition', 'Retouch', 'Colour control']
     },
     {
       slug: 'umi',
@@ -101,9 +101,9 @@
       sector: 'Industrial Manufacturing',
       badge: 'B2B Technical',
       pairs: 3,
-      changed: 'Shifted from product-bag shots on dark backgrounds to application-context imagery — the product shown in the environment it specifies into — with a structured benefit stack replacing paragraph copy.',
-      mattered: 'Industrial buyers specify on performance criteria. Showing the finished environment answers "where does this apply", which a packaging shot cannot.',
-      impact: 'Makes technical content usable by the sales team: each post now doubles as a specification aid for contractors and consultants.'
+      changed: 'I moved from a product shot on a dark background to the real place where the product is used. I turned the long paragraph into a short list that can be read in one pass.',
+      why: 'A B2B buyer needs to see where the product fits. A bag on a black background does not answer that question.',
+      skills: ['Photo research', 'Composition', 'Text layout', 'Problem solving']
     },
     {
       slug: 'bassem-ragab',
@@ -111,9 +111,9 @@
       sector: 'B2B Distribution · KSA',
       badge: 'Authority',
       pairs: 4,
-      changed: 'Built a portfolio-authority frame — full product range staged in one controlled composition, principal brand marks presented as a credential row, and a headline that states market position rather than describing products.',
-      mattered: 'A distributor sells representation, not products. The commercial argument is the breadth of the portfolio and the trust of the principals.',
-      impact: 'Converts social content into a distribution-credentials asset the commercial team can use in front of new principals and institutional buyers.'
+      changed: 'I staged the full product range in one controlled shot with clean light. I put the partner logos in a row underneath, and wrote a headline about market position instead of about products.',
+      why: 'A distributor sells range and trust, not single items. Both have to be visible in one look.',
+      skills: ['Composition', 'Retouch', 'Text layout', 'Problem solving']
     },
     {
       slug: 'ihs',
@@ -121,19 +121,19 @@
       sector: 'Development & Hospitality',
       badge: 'Track Record',
       pairs: 3,
-      changed: 'Reframed output around completed-project evidence — architectural photography at controlled light, a clean project title lock-up and a positioning line, replacing generic corporate visuals.',
-      mattered: 'In development and contracting, the delivered building is the credential. Showing it is more persuasive than any capability claim.',
-      impact: 'Builds a visible track record that supports tender and partnership conversations, where proof of completion is the qualifying criterion.'
+      changed: 'I led with a photo of the finished building at good evening light. I kept the title short, gave it room, and let the building do the work.',
+      why: 'In building work the finished project is the proof. It says more than any sentence about capability.',
+      skills: ['Lighting', 'Photo research', 'Composition', 'Text layout']
     },
     {
       slug: 'the-hub',
       name: 'Jeddah Initiative Hub',
-      sector: 'Entrepreneurship · Workspace',
+      sector: 'Workspace · Jeddah',
       badge: 'Experience Led',
       pairs: 3,
-      changed: 'Led with real interior photography of the space at atmosphere lighting, a consistent gold-on-dark identity frame and benefit-led Arabic headlines, in place of generic layouts.',
-      mattered: 'A workspace is sold on how it feels to work in. Prospective members are buying an environment they have not yet visited.',
-      impact: 'Drives qualified space enquiries and supports occupancy — the single metric that determines the account\'s commercial performance.'
+      changed: 'I used real photos of the space at warm evening light, and kept one gold on dark frame across every post. The headline now talks about the benefit, not about the place.',
+      why: 'People rent a workspace for how it feels to work there. They need to see that before they book a visit.',
+      skills: ['Lighting', 'Art direction', 'Composition', 'Brand rules']
     }
   ];
 
@@ -148,79 +148,79 @@
   var PEOPLE = [
     {
       initials: 'M', name: 'Mahmoud', role: 'Graphic Design',
-      delta: 'Now operates independently',
+      delta: 'Works on his own now',
       copy: [
-        'The strongest development track in the unit. Mahmoud\'s design thinking changed fundamentally — he now begins from the client\'s objective and argues layout decisions from it, rather than starting from execution.',
-        'His AI workflow moved from no production use to a confident, deliberate part of how he works. He knows where generative output belongs in a piece and where it does not.'
+        'The biggest change in the team. Mahmoud now starts from the client goal and explains his layout from it. Before, he started from the software.',
+        'His AI work went from nothing to a normal part of his day. He knows where AI output can go in a piece and where it cannot.'
       ],
-      why: '<b>Operational value:</b> he understands the creative standard well enough to carry work forward with minimal supervision. That releases senior review time and removes a single-point dependency on me for day-to-day quality.',
+      why: '<b>What this changes:</b> he knows the standard well enough to carry work forward with very little review from me. That gives me back review time and means quality no longer depends on one person.',
       skills: [
         { label: 'Design thinking', from: 2, to: 5 },
-        { label: 'AI production workflow', from: 1, to: 5 },
-        { label: 'Independent execution', from: 2, to: 5 },
-        { label: 'Holds the standard unsupervised', from: 2, to: 5 }
+        { label: 'AI in production', from: 1, to: 5 },
+        { label: 'Working on his own', from: 2, to: 5 },
+        { label: 'Holds the standard alone', from: 2, to: 5 }
       ]
     },
     {
       initials: 'K', name: 'Kholoud', role: 'Graphic Design',
-      delta: 'Significant growth',
+      delta: 'Strong growth',
       copy: [
-        'Significant, broad-based growth across four areas: AI production, retouching and technical finish, overall creative quality, and problem solving on ambiguous briefs.',
-        'The technical finish improvement is the most commercially relevant — work that previously needed a senior pass now clears review at first submission more often.'
+        'Clear growth in four areas: AI production, retouch and finish, overall quality, and solving problems when the brief is not clear.',
+        'The finish is the most useful part for the business. Work that used to need a senior pass now clears review on the first try much more often.'
       ],
-      why: '<b>Operational value:</b> a second designer capable of high-finish output reduces the queue at the senior review gate and gives the unit real redundancy on demanding accounts.',
+      why: '<b>What this changes:</b> a second designer who can reach high finish means less queue at my review step, and real backup on the harder accounts.',
       skills: [
-        { label: 'AI production', from: 1, to: 4 },
-        { label: 'Retouching &amp; technical finish', from: 2, to: 4 },
+        { label: 'AI in production', from: 1, to: 4 },
+        { label: 'Retouch and finish', from: 2, to: 4 },
         { label: 'Creative quality', from: 2, to: 4 },
         { label: 'Problem solving', from: 2, to: 4 }
       ]
     },
     {
       initials: 'H', name: 'Heba', role: 'Graphic Design',
-      delta: 'New discipline acquired',
+      delta: 'New skill added',
       copy: [
-        'Heba learned a discipline the unit previously lacked: typography as a system rather than a styling choice. She now builds campaigns as connected sets, with one type hierarchy carried across every asset in a flight.',
-        'That extended naturally into brand thinking — she designs to the brand\'s rules rather than to the individual post.'
+        'Heba learned something the team did not have: typography as a system, not as a style choice. She now builds a campaign as one connected set, with the same type rules in every post.',
+        'That grew into brand thinking. She designs to the brand rules, not to the single post in front of her.'
       ],
-      why: '<b>Operational value:</b> connected campaign design is what makes multi-asset flights consistent without senior supervision on every item. It is the capability that lets throughput rise without quality falling.',
+      why: '<b>What this changes:</b> connected campaign design is what keeps a big set of posts consistent without me checking each one. It is the skill that lets output go up while quality stays.',
       skills: [
         { label: 'Typography', from: 1, to: 4 },
         { label: 'Campaign systems', from: 1, to: 4 },
-        { label: 'Creative consistency', from: 2, to: 4 },
+        { label: 'Consistency', from: 2, to: 4 },
         { label: 'Brand thinking', from: 2, to: 4 }
       ]
     },
     {
-      initials: 'A', name: 'Alice', role: 'Video Editing → Multi-discipline',
-      delta: 'Scope expanded',
+      initials: 'A', name: 'Alice', role: 'Video Editing and more',
+      delta: 'Wider role',
       copy: [
-        'Originally a specialist video editor. Alice developed strong AI capability and has expanded beyond her original specialisation into adjacent production work.',
-        'She also took on storyboarding, which she did not do before — video now starts from a planned sequence rather than being assembled in the edit.',
-        'Her editing strength was never the constraint — the constraint was that it was the only thing the business could route to her.'
+        'Alice started as a video editor only. She built strong AI skills and now takes on work outside her first job.',
+        'She also learned storyboarding, which she did not do before. Video now starts from a planned sequence instead of being built inside the edit.',
+        'Her editing was never the problem. The problem was that editing was the only thing we could give her.'
       ],
-      why: '<b>Operational value:</b> broader deployment. A specialist who can also absorb overflow production work materially improves how the unit handles peak load — a resourcing gain, not just a skills gain.',
+      why: '<b>What this changes:</b> we can give her more kinds of work. A specialist who can also take extra production load makes busy weeks much easier to plan.',
       skills: [
-        { label: 'AI production', from: 1, to: 4 },
+        { label: 'AI in production', from: 1, to: 4 },
         { label: 'Storyboarding', from: 1, to: 4 },
-        { label: 'Scope beyond video', from: 1, to: 3 },
-        { label: 'Video editing (baseline strength)', from: 4, to: 4 }
+        { label: 'Work beyond video', from: 1, to: 3 },
+        { label: 'Video editing (already strong)', from: 4, to: 4 }
       ]
     },
     {
-      initials: 'SH', name: 'Shaimaa', role: 'Motion Design · Storyboarding', warn: true,
-      delta: 'New skill · partial adoption',
+      initials: 'SH', name: 'Shaimaa', role: 'Motion and Storyboarding', warn: true,
+      delta: 'New skill, slower change',
       copy: [
-        'The clearest gain here is storyboarding. Shaimaa did not work from storyboards before; she does now — motion work begins from a planned sequence that can be reviewed and approved before production time is spent on it.',
-        'Reported honestly: adoption of the wider workflow change was slower here than in the design unit, and uptake of the AI toolchain remains incomplete.',
-        'Measurable positive impact was still achieved — output is more consistent with the written creative standard, and briefs now arrive through the same structured approval path as the rest of the unit.'
+        'The clearest gain here is storyboarding. Shaimaa did not work from storyboards before. She does now, so motion work starts from a plan we can approve before we spend edit time on it.',
+        'To be honest: the wider workflow change was slower here than in the design team, and the AI tools are still not fully used.',
+        'There was still real progress. The output matches the written standard more often, and briefs now come through the same approval path as the rest of the team.'
       ],
-      why: '<b>Recommendation:</b> this is the clearest remaining capability gap and therefore the most available upside. It needs a defined adoption plan with management backing rather than informal encouragement — I have proposed this as part of the workflow items currently under discussion.',
+      why: '<b>My recommendation:</b> this is the clearest gap left, so it is also the easiest place to gain. It needs a short adoption plan with your backing. Asking nicely has not been enough.',
       skills: [
         { label: 'Storyboarding', from: 1, to: 4 },
-        { label: 'Output consistency', from: 2, to: 3 },
-        { label: 'Workflow adoption', from: 1, to: 2 },
-        { label: 'AI experimentation', from: 1, to: 2 }
+        { label: 'Consistency', from: 2, to: 3 },
+        { label: 'Using the new workflow', from: 1, to: 2 },
+        { label: 'Trying AI tools', from: 1, to: 2 }
       ]
     }
   ];
@@ -393,13 +393,16 @@
       '<div class="lb__in">' +
         '<figure class="lb__fig"><img alt=""><figcaption class="lb__cap lb__cap--b">Before</figcaption></figure>' +
         '<figure class="lb__fig"><img alt=""><figcaption class="lb__cap lb__cap--a">After</figcaption></figure>' +
-      '</div>';
+      '</div>' +
+      '<div class="lb__solo"></div>';
     document.body.appendChild(lb);
 
     lb.querySelector('.lb__close').addEventListener('click', closeLightbox);
     lb.querySelector('.lb__prev').addEventListener('click', function (e) { e.stopPropagation(); stepLightbox(-1); });
     lb.querySelector('.lb__next').addEventListener('click', function (e) { e.stopPropagation(); stepLightbox(1); });
-    lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lb__in')) closeLightbox(); });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('lb__in') || e.target.classList.contains('lb__solo')) closeLightbox();
+    });
     document.addEventListener('keydown', function (e) {
       if (!lb.classList.contains('is-open')) return;
       if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
@@ -414,15 +417,16 @@
     var base = 'assets/work/' + acc.slug + '/';
     var imgs = lb.querySelectorAll('.lb__fig img');
     imgs[0].src = base + 'before-' + (i + 1) + '.webp';
-    imgs[0].alt = acc.name + ' — before, comparison ' + (i + 1);
+    imgs[0].alt = acc.name + ', before, comparison ' + (i + 1);
     imgs[1].src = base + 'after-' + (i + 1) + '.webp';
-    imgs[1].alt = acc.name + ' — after, comparison ' + (i + 1);
+    imgs[1].alt = acc.name + ', after, comparison ' + (i + 1);
     lb.querySelector('.lb__title').textContent = acc.name + ' · comparison ' + (i + 1) + ' of ' + acc.pairs;
     lb.querySelector('.lb__prev').disabled = acc.pairs < 2;
     lb.querySelector('.lb__next').disabled = acc.pairs < 2;
   }
 
   function stepLightbox(dir) {
+    if (!lbState.acc) return; // solo media viewer has nothing to step through
     var n = lbState.acc.pairs;
     lbState.idx = (lbState.idx + dir + n) % n;
     paintLightbox();
@@ -431,7 +435,26 @@
   function openLightbox(acc, idx) {
     ensureLightbox();
     lbState.acc = acc; lbState.idx = idx;
+    lb.classList.remove('is-solo');
+    lb.querySelector('.lb__solo').innerHTML = '';
     paintLightbox();
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lb.querySelector('.lb__close').focus();
+  }
+
+  // Single item viewer, used by the video and campaign sections
+  function openMedia(item) {
+    ensureLightbox();
+    lbState.acc = null;
+    lb.classList.add('is-solo');
+    lb.querySelector('.lb__prev').hidden = true;
+    lb.querySelector('.lb__next').hidden = true;
+    lb.querySelector('.lb__title').textContent = item.title;
+    var solo = lb.querySelector('.lb__solo');
+    solo.innerHTML = item.type === 'video'
+      ? '<video src="' + item.src + '" controls autoplay playsinline preload="metadata"></video>'
+      : '<img src="' + item.src + '" alt="' + item.title + '">';
     lb.classList.add('is-open');
     document.body.style.overflow = 'hidden';
     lb.querySelector('.lb__close').focus();
@@ -439,7 +462,12 @@
 
   function closeLightbox() {
     if (!lb) return;
-    lb.classList.remove('is-open');
+    var v = lb.querySelector('.lb__solo video');
+    if (v) { v.pause(); }
+    lb.querySelector('.lb__solo').innerHTML = '';
+    lb.classList.remove('is-open', 'is-solo');
+    lb.querySelector('.lb__prev').hidden = false;
+    lb.querySelector('.lb__next').hidden = false;
     document.body.style.overflow = '';
   }
 
@@ -454,10 +482,10 @@
     var fig = document.createElement('button');
     fig.type = 'button';
     fig.className = 'mx__cell';
-    fig.setAttribute('aria-label', acc.name + ' — ' + kind + ' ' + (i + 1) + ', open larger comparison');
+    fig.setAttribute('aria-label', acc.name + ', ' + kind + ' ' + (i + 1) + ', open larger comparison');
     fig.innerHTML =
       '<span class="mx__n">' + String(i + 1).padStart(2, '0') + '</span>' +
-      '<img src="assets/work/' + acc.slug + '/' + kind + '-' + (i + 1) + '.webp" alt="' + acc.name + ' — ' + kind + ' ' + (i + 1) + '" loading="lazy" decoding="async">' +
+      '<img src="assets/work/' + acc.slug + '/' + kind + '-' + (i + 1) + '.webp" alt="' + acc.name + ', ' + kind + ' ' + (i + 1) + '" loading="lazy" decoding="async">' +
       '<span class="mx__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5M11 8.5v5M8.5 11h5"/></svg></span>';
     fig.addEventListener('click', function () { openLightbox(acc, i); });
     return fig;
@@ -528,9 +556,14 @@
       var notes = document.createElement('div');
       notes.className = 'ev__notes';
       notes.innerHTML =
-        '<div class="note"><b>What changed</b><p>' + acc.changed + '</p></div>' +
-        '<div class="note"><b>Why it mattered</b><p>' + acc.mattered + '</p></div>' +
-        '<div class="note note--impact"><b>Business impact</b><p>' + acc.impact + '</p></div>';
+        '<div class="note"><b>What I changed</b><p>' + acc.changed + '</p></div>' +
+        '<div class="note"><b>Why it helps</b><p>' + acc.why + '</p></div>' +
+        '<div class="note note--impact"><b>Skills I brought in</b>' +
+          '<p class="note__sub">Not in the work before. In it now.</p>' +
+          '<div class="chips">' + acc.skills.map(function (s) {
+            return '<span class="chip chip--skill">' + s + '</span>';
+          }).join('') + '</div>' +
+        '</div>';
       panel.appendChild(notes);
 
       var countEl = head.querySelector('.ev__count');
@@ -584,7 +617,7 @@
 
       var skills = p.skills.map(function (s) {
         return '<div class="skill">' +
-          '<div class="skill__lab"><b>' + s.label + '</b><span>' + BANDS[s.from - 1] + ' → ' + BANDS[s.to - 1] + '</span></div>' +
+          '<div class="skill__lab"><b>' + s.label + '</b><span>' + BANDS[s.from - 1] + ' to ' + BANDS[s.to - 1] + '</span></div>' +
           '<div class="skill__track">' +
             '<div class="skill__a" data-w="' + (s.to / 5) * 100 + '"></div>' +
             '<div class="skill__b" data-w="' + (s.from / 5) * 100 + '"></div>' +
@@ -636,13 +669,46 @@
       }
     }
 
-    var note = document.createElement('div');
-    note.className = 'datanote';
-    note.innerHTML =
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>' +
-      '<p><b>Bands are a structured assessment, not a measured score.</b> Each level (Emerging · Developing · Competent · Strong · Independent) reflects my review of the designer\'s live output against the written creative standard. Converting this into an audited figure requires the quarterly skills matrix proposed in the KPI framework — scored jointly by team lead and General Manager.</p>';
-    peopleEl.parentNode.insertBefore(note, peopleEl.nextSibling);
   }
+
+  /* ======================================================================
+     8b · Video: inline play, and lightbox with sound
+     ====================================================================== */
+  document.querySelectorAll('.vid__cell').forEach(function (cell) {
+    var video = cell.querySelector('video');
+    var play = cell.querySelector('.vid__play');
+    if (!video) return;
+
+    function toggle(e) {
+      e.stopPropagation();
+      if (video.paused) {
+        // only one inline video runs at a time
+        document.querySelectorAll('.vid__cell video').forEach(function (v) {
+          if (v !== video && !v.paused) { v.pause(); v.closest('.vid__cell').classList.remove('is-playing'); }
+        });
+        video.play().then(function () { cell.classList.add('is-playing'); }).catch(function () {});
+      } else {
+        video.pause();
+        cell.classList.remove('is-playing');
+      }
+    }
+    if (play) play.addEventListener('click', toggle);
+    cell.addEventListener('click', function () {
+      openMedia({
+        type: 'video',
+        src: cell.getAttribute('data-src'),
+        title: cell.getAttribute('data-title') || ''
+      });
+    });
+  });
+
+  // Campaign images open in the same viewer
+  document.querySelectorAll('.camp__kv img, .camp__row img').forEach(function (img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function () {
+      openMedia({ type: 'image', src: img.getAttribute('src'), title: img.getAttribute('alt') || '' });
+    });
+  });
 
   /* ======================================================================
      9 · Init + watchdog + print
