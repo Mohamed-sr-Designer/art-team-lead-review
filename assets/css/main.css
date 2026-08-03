@@ -671,13 +671,98 @@ strong, b { font-weight: 640; color: var(--navy); }
   margin-top: clamp(1.5rem, 3vw, 2.5rem);
   border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--card);
   padding: clamp(1.2rem, 2.6vw, 1.8rem); box-shadow: var(--sh-2);
-  display: grid; gap: 1.3rem; grid-template-columns: minmax(0, 1fr) minmax(0, .78fr); align-items: center;
 }
-@media (max-width: 900px) { .vid__ai { grid-template-columns: 1fr; } }
-.vid__aihd h3 { font-size: clamp(1.2rem, 2.2vw, 1.6rem); margin-bottom: .6rem; }
-.vid__aihd p { font-size: .89rem; line-height: 1.6; max-width: 56ch; }
-.vid__aigrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
-.vid__aigrid .vid__cell { max-height: 46vh; }
+.vid__aihd { margin-bottom: 1.2rem; }
+.vid__aihd h3 { font-size: clamp(1.2rem, 2.2vw, 1.6rem); margin: .5rem 0 .55rem; }
+.vid__aihd p { font-size: .89rem; line-height: 1.6; max-width: 68ch; }
+.vid__aigrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; }
+.vid__aigrid .vid__cell { max-height: none; }
+@media (max-width: 720px) { .vid__aigrid { grid-template-columns: repeat(2, 1fr); } }
+
+/* Attribution banner */
+.byline {
+  display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 1rem; align-items: center;
+  border: 1px solid rgba(247,99,2,.24); background: var(--orange-050);
+  border-radius: var(--r-md); padding: 1rem 1.2rem; margin-bottom: clamp(1.4rem, 3vw, 2rem);
+}
+.byline__av {
+  width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 680; font-size: 1rem;
+  background: var(--navy); color: #fff;
+}
+.byline p { font-size: .875rem; line-height: 1.58; color: var(--navy-700); }
+.byline b { color: var(--navy); }
+
+/* ---------- 10b2. My own production ---------- */
+.mine__why { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin-bottom: clamp(1.6rem, 3vw, 2.4rem); }
+@media (max-width: 900px) { .mine__why { grid-template-columns: 1fr; } }
+.mine__wc {
+  border: 1px solid var(--line); border-radius: var(--r-md); background: var(--card);
+  padding: 1.15rem 1.2rem; display: grid; gap: .3rem; align-content: start;
+  transition: border-color .25s var(--ease), transform .3s var(--ease);
+}
+.mine__wc:hover { border-color: rgba(247,99,2,.36); transform: translateY(-2px); }
+.mine__wn { font-family: var(--font-mono); font-size: .62rem; letter-spacing: .14em; color: var(--orange); }
+.mine__wc b { font-size: .95rem; font-weight: 640; color: var(--navy); letter-spacing: -0.014em; }
+.mine__wc p { font-size: .83rem; line-height: 1.56; }
+
+.mine { display: grid; gap: clamp(1.2rem, 2.5vw, 2rem); }
+.mine__g {
+  border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--card);
+  padding: clamp(1.2rem, 2.6vw, 1.8rem); box-shadow: var(--sh-2);
+}
+.mine__hd { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .8rem; margin-bottom: 1.05rem; }
+.mine__hd h4 { font-size: 1.12rem; }
+.mine__meta { display: block; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .13em; text-transform: uppercase; color: var(--text-3); margin-top: .2rem; }
+.mine__count {
+  font-family: var(--font-mono); font-size: .58rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--orange-600); background: var(--orange-050); border: 1px solid rgba(247,99,2,.28);
+  padding: .28rem .6rem; border-radius: 100px; white-space: nowrap;
+}
+.mine__row { display: grid; gap: .8rem; }
+.mine__row + .mine__row { margin-top: .8rem; }
+.mine__row--wide { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.mine__row--tall { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.mine__cell { max-height: none; }
+.mine__cell--wide { aspect-ratio: 16 / 9; }
+.mine__cell--tall { aspect-ratio: 9 / 16; }
+.mine__note { font-size: .855rem; line-height: 1.6; margin-top: 1rem; padding-top: .9rem; border-top: 1px dashed var(--line); }
+@media (max-width: 900px) {
+  .mine__row--wide { grid-template-columns: repeat(2, 1fr); }
+  .mine__row--tall { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .mine__row--wide { grid-template-columns: 1fr; }
+  .mine__row--tall { grid-template-columns: repeat(2, 1fr); }
+  .mine__row { gap: .5rem; }
+}
+
+/* ---------- 10b3. Pitch decks ---------- */
+.pitch__flow {
+  display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .5rem;
+  margin-bottom: clamp(1.6rem, 3vw, 2.4rem);
+}
+@media (max-width: 980px) { .pitch__flow { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .pitch__flow { grid-template-columns: repeat(2, 1fr); } }
+.pitch { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+@media (max-width: 900px) { .pitch { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .pitch { grid-template-columns: 1fr; } }
+.pitch__c {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 1rem; align-items: center;
+  border: 1px solid var(--line); border-radius: var(--r-md); background: var(--card);
+  padding: 1.15rem 1.25rem; box-shadow: var(--sh-1);
+  transition: transform .32s var(--ease), box-shadow .32s var(--ease), border-color .28s var(--ease);
+}
+.pitch__c:hover { transform: translateY(-3px); box-shadow: var(--sh-3); border-color: rgba(247,99,2,.4); }
+.pitch__n {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: .68rem; font-weight: 600;
+  background: var(--orange-050); color: var(--orange-600); border: 1px solid rgba(247,99,2,.24);
+}
+.pitch__c b { display: block; font-size: .96rem; font-weight: 640; color: var(--navy); letter-spacing: -0.016em; }
+.pitch__meta { display: block; font-family: var(--font-mono); font-size: .56rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); margin-top: .18rem; }
+.pitch__c > svg { width: 15px; height: 15px; color: var(--orange); transition: transform .3s var(--ease); }
+.pitch__c:hover > svg { transform: translate(2px, -2px); }
 
 /* ---------- 10c. Campaigns ---------- */
 .camps { display: grid; gap: clamp(1.5rem, 3vw, 2.5rem); }

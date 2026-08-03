@@ -23,7 +23,7 @@
       pairs: 6,
       changed: 'I dropped the stock render and used a real photo of the site from the air. I drew the plot lines on top of the photo, so the plan reads at a glance. I cleaned the logo row at the bottom and gave the page one clear first line.',
       why: 'Buyers want proof that the project is real and moving. A real site photo says that. A render does not.',
-      skills: ['Composition', 'Photo research', 'Text layout', 'Retouch']
+      skills: ['Composition', 'Moodboard', 'Text layout', 'Retouch']
     },
     {
       slug: 'alrajhi-alrawda',
@@ -43,7 +43,7 @@
       pairs: 3,
       changed: 'I built a look that belongs to this project: its own logo treatment, its own colour and its own photo mood. I kept it close enough to the older project so the two feel connected.',
       why: 'A new project is a risk for the buyer. When it looks like the project that was already delivered, the trust moves across with it.',
-      skills: ['Art direction', 'Colour control', 'Text layout', 'Brand rules']
+      skills: ['Art direction', 'Colour control', 'Text layout', 'Brand position']
     },
     {
       slug: 'abaq',
@@ -53,7 +53,7 @@
       pairs: 3,
       changed: 'I stopped using raw event photos. I picked clean classroom images and fixed the light and the colour on each one. I set one type style that works for Arabic and English together.',
       why: 'Parents judge a school by how it looks before they visit. The post is the first proof of the quality the school claims.',
-      skills: ['Photo research', 'Retouch', 'Text layout', 'Colour control']
+      skills: ['Moodboard', 'Retouch', 'Text layout', 'Colour control']
     },
     {
       slug: 'riad-elabdaa',
@@ -63,7 +63,7 @@
       pairs: 3,
       changed: 'I locked the logo place, the colours and the text sizes. Every post now sits inside the same frame, so the designer starts from a system instead of a blank page.',
       why: 'When the posts look the same, people start to remember the school. When every post looks different, each one starts from zero.',
-      skills: ['Brand rules', 'Text layout', 'Colour control', 'Time control']
+      skills: ['Brand position', 'Text layout', 'Colour control', 'Time control']
     },
     {
       slug: 'dora',
@@ -103,7 +103,7 @@
       pairs: 3,
       changed: 'I moved from a product shot on a dark background to the real place where the product is used. I turned the long paragraph into a short list that can be read in one pass.',
       why: 'A B2B buyer needs to see where the product fits. A bag on a black background does not answer that question.',
-      skills: ['Photo research', 'Composition', 'Text layout', 'Problem solving']
+      skills: ['Moodboard', 'Composition', 'Text layout', 'Problem solving']
     },
     {
       slug: 'bassem-ragab',
@@ -123,7 +123,7 @@
       pairs: 3,
       changed: 'I led with a photo of the finished building at good evening light. I kept the title short, gave it room, and let the building do the work.',
       why: 'In building work the finished project is the proof. It says more than any sentence about capability.',
-      skills: ['Lighting', 'Photo research', 'Composition', 'Text layout']
+      skills: ['Lighting', 'Moodboard', 'Composition', 'Text layout']
     },
     {
       slug: 'the-hub',
@@ -133,11 +133,51 @@
       pairs: 3,
       changed: 'I used real photos of the space at warm evening light, and kept one gold on dark frame across every post. The headline now talks about the benefit, not about the place.',
       why: 'People rent a workspace for how it feels to work there. They need to see that before they book a visit.',
-      skills: ['Lighting', 'Art direction', 'Composition', 'Brand rules']
+      skills: ['Lighting', 'Art direction', 'Composition', 'Brand position']
     }
   ];
 
   var PAGE_SIZE = 3; // one 3 × 2 matrix per page
+
+  /* ======================================================================
+     DATA · Work produced by me personally
+     Source: D:/AI Videos/New folder  →  assets/mine/
+     ====================================================================== */
+  var MINE = [
+    {
+      client: 'Tilal Village', meta: 'Community · Makkah',
+      note: 'A full set for the launch: three wide films and one vertical cut. Real location footage graded and extended with AI, so we covered angles a shoot day would not have reached.',
+      items: [
+        { f: 'tilal-1', o: 'wide' }, { f: 'tilal-2', o: 'wide' },
+        { f: 'tilal-3', o: 'wide' }, { f: 'tilal-4', o: 'tall' }
+      ]
+    },
+    {
+      client: 'Jeddah Initiative Hub', meta: 'Workspace · Jeddah',
+      note: 'Three vertical films built entirely from AI scenes. No shoot, no location fee, no talent booking. The whole set was made and approved in days.',
+      items: [{ f: 'hub-1', o: 'tall' }, { f: 'hub-2', o: 'tall' }, { f: 'hub-3', o: 'tall' }]
+    },
+    {
+      client: 'AMAM · Durrat Al Arous', meta: 'Real Estate · Jeddah',
+      note: 'A luxury seafront film for a project that was not built yet. AI gave us the finished property on screen while it was still under construction.',
+      items: [{ f: 'amam-1', o: 'wide' }]
+    },
+    {
+      client: 'Makkiyoon Urban Developers', meta: 'Real Estate · Makkah',
+      note: 'An aerial brand film for a Makkah development. The camera move and the light were built to feel like a real drone shoot.',
+      items: [{ f: 'makkiyoon-1', o: 'wide' }]
+    },
+    {
+      client: 'nice', meta: 'Brand film',
+      note: 'A character led brand film with dialogue. This one tested the full pipeline: AI people, AI motion and AI voice over in Arabic.',
+      items: [{ f: 'nice-1', o: 'wide' }]
+    },
+    {
+      client: 'Wattania', meta: 'Legal services · Healthcare',
+      note: 'A story led vertical film for a service that is hard to picture. AI let us stage the exact scene the script needed instead of settling for stock.',
+      items: [{ f: 'wattania-1', o: 'tall' }]
+    }
+  ];
 
   /* ======================================================================
      DATA · People development
@@ -672,7 +712,42 @@
   }
 
   /* ======================================================================
-     8b · Video: inline play, and lightbox with sound
+     8b · My own production: render the client groups
+     ====================================================================== */
+  var mineEl = document.getElementById('mineList');
+  if (mineEl) {
+    MINE.forEach(function (g) {
+      var wide = g.items.filter(function (i) { return i.o === 'wide'; });
+      var tall = g.items.filter(function (i) { return i.o === 'tall'; });
+
+      function row(items, kind) {
+        if (!items.length) return '';
+        return '<div class="mine__row mine__row--' + kind + '">' + items.map(function (it) {
+          return '<figure class="vid__cell mine__cell mine__cell--' + kind + '" ' +
+            'data-src="assets/mine/' + it.f + '.mp4" data-title="' + g.client + '">' +
+            '<video src="assets/mine/' + it.f + '.mp4" poster="assets/mine/' + it.f + '.jpg" ' +
+            'muted loop playsinline preload="none"></video>' +
+            '<button class="vid__play" type="button" aria-label="Play ' + g.client + ' video">' +
+            '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></button>' +
+            '</figure>';
+        }).join('') + '</div>';
+      }
+
+      var art = document.createElement('article');
+      art.className = 'mine__g';
+      art.innerHTML =
+        '<div class="mine__hd">' +
+          '<div><h4>' + g.client + '</h4><span class="mine__meta">' + g.meta + '</span></div>' +
+          '<span class="mine__count">' + g.items.length + (g.items.length > 1 ? ' films' : ' film') + '</span>' +
+        '</div>' +
+        row(wide, 'wide') + row(tall, 'tall') +
+        '<p class="mine__note">' + g.note + '</p>';
+      mineEl.appendChild(art);
+    });
+  }
+
+  /* ======================================================================
+     8c · Video: inline play, and lightbox with sound
      ====================================================================== */
   document.querySelectorAll('.vid__cell').forEach(function (cell) {
     var video = cell.querySelector('video');
