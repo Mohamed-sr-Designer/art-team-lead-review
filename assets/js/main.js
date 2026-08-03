@@ -187,7 +187,7 @@
 
   var PEOPLE = [
     {
-      initials: 'M', name: 'Mahmoud', role: 'Graphic Design',
+      initials: 'M', name: 'Mahmoud', role: 'Senior Designer',
       delta: 'Works on his own now',
       copy: [
         'The biggest change in the team. Mahmoud now starts from the client goal and explains his layout from it. Before, he started from the software.',
@@ -202,7 +202,7 @@
       ]
     },
     {
-      initials: 'K', name: 'Kholoud', role: 'Graphic Design',
+      initials: 'K', name: 'Kholoud', role: 'Designer',
       delta: 'Strong growth',
       copy: [
         'Clear growth in four areas: AI production, retouch and finish, overall quality, and solving problems when the brief is not clear.',
@@ -217,7 +217,7 @@
       ]
     },
     {
-      initials: 'H', name: 'Heba', role: 'Graphic Design',
+      initials: 'H', name: 'Heba', role: 'Senior Designer',
       delta: 'New skill added',
       copy: [
         'Heba learned something the team did not have: typography as a system, not as a style choice. She now builds a campaign as one connected set, with the same type rules in every post.',
@@ -248,10 +248,10 @@
       ]
     },
     {
-      initials: 'SH', name: 'Shaimaa', role: 'Motion and Storyboarding', warn: true,
+      initials: 'SH', name: 'Shaimaa', role: 'Video Editing and more', warn: true,
       delta: 'New skill, slower change',
       copy: [
-        'The clearest gain here is storyboarding. Shaimaa did not work from storyboards before. She does now, so motion work starts from a plan we can approve before we spend edit time on it.',
+        'The clearest gain here is storyboarding. Shaimaa did not work from storyboards before. She does now, so video work starts from a plan we can approve before we spend edit time on it.',
         'To be honest: the wider workflow change was slower here than in the design team, and the AI tools are still not fully used.',
         'There was still real progress. The output matches the written standard more often, and briefs now come through the same approval path as the rest of the team.'
       ],
