@@ -1,253 +1,148 @@
 /* ==========================================================================
-   60-Day Performance Improvement Plan — initiative renderer
+   60-Day Action Plan — gap and solution renderer
    Runs before main.js so the injected nodes are picked up by its observers.
    ========================================================================== */
 (function () {
   'use strict';
 
-  var INITIATIVES = [
+  var GAPS = [
     {
       n: '01', pri: 'critical',
-      title: 'Remove the single point of failure',
-      sub: 'Team dependency · "If you disappear tomorrow, the team will struggle"',
-      gap: 'Work stops at my review step and decisions wait for my answer. No account has an owner other than me.',
-      impact: 'This is the largest operational risk in the creative function. If I am absent, output and quality drop at the same time. The company carries that risk on every account, every week.',
-      cause: 'I never wrote down how decisions get made. The standard exists in my head and is applied by me. Reviewing everything myself was faster in month one, so I never built the alternative.',
+      title: 'The team waits for me',
+      tag: 'Team dependency',
+      now: 'Work stops at my desk. Nobody sends anything to a client before I look at it. No account has an owner except me.',
+      cost: 'If I am not here, the work stops. That is a risk on every client, every week. It is also the reason my manager said the team would struggle without me.',
       steps: [
-        'Publish a decision rights matrix: what each designer decides alone, what needs a peer check, what comes to me.',
-        'Write the creative standard as a one page checklist a designer can apply without me.',
-        'Assign a named owner per account, including the client conversation, not only the artwork.',
-        'Run a three day test in Week 6 where I review nothing. Record what breaks.'
+        'Give every account a named owner. The owner also talks to the client.',
+        'Write the quality rules on one page, so a designer can check their own work.',
+        'Write down who decides what: alone, with a colleague, or with me.',
+        'In Week 6 I review nothing for three days. We write down what breaks and we fix it.'
       ],
+      risk: 'Quality can drop while people take over. I hand over one account per person per week, never all at once, and every first release gets a check from a colleague.',
       timeline: 'Weeks 1 to 6',
-      owner: 'Me. Decision matrix signed off with the GM in Week 2.',
-      kpis: [
-        'Accounts with a named owner (target: all)',
-        'Assets released without my review',
-        'Decisions escalated to me per week',
-        'Lead absent test completed with a written report'
-      ],
-      why: 'Critical. The GM named this as the strongest concern, and it is the only risk here that does not shrink on its own over time.',
-      risk: 'Quality drops during handover. People feel pushed into responsibility they did not ask for.',
-      mitigation: 'Handover is staged, one account per designer per week, never all at once. Every handover starts with the written standard and a peer check, so nobody is alone on their first release.',
-      outcome: 'The creative function keeps running at standard when I am not there. Delivery risk moves from one person to a system.'
+      metric: 'All 12 accounts have an owner. Work released without my review goes up each week.',
+      priLabel: 'Critical'
     },
     {
       n: '02', pri: 'critical',
-      title: 'Stop solo playing',
-      sub: 'Leadership · Doing the work instead of building the people who do it',
-      gap: 'I solve problems myself rather than building people who can solve them. I still produce client work directly.',
-      impact: 'Team capability stays flat while my hours stay high. The company pays a lead salary for individual contributor output and gets no compounding return on it.',
-      cause: 'Producing it myself was the fastest route to the quality bar in month one, and I never switched off that mode when the reason expired. I also mistook rescuing work for leading it.',
+      title: 'I do the work instead of teaching it',
+      tag: 'Solo player',
+      now: 'When quality is at risk I make the design myself. It is the fastest way to a good result today, and it teaches nobody.',
+      cost: 'The team stays the same while my hours go up. The company pays for a team lead and gets a designer.',
       steps: [
-        'From Week 2 I produce no first drafts on client work. Any exception is logged with a written reason.',
-        'When someone brings me a problem, I ask three questions before I offer an opinion.',
-        'Work I would have made myself becomes a paired session where the designer drives and I coach.',
-        'My personal production time is capped and reported weekly.'
+        'From Week 2 I make no first drafts for clients. If I break this rule I write down why.',
+        'When someone brings me a problem, I ask three questions before I give an answer.',
+        'Work I would have made myself becomes a session where the designer works and I coach.',
+        'I report how much I produced each week, so this is easy to check.'
       ],
+      risk: 'The first tight deadline will make taking the file back look like the right thing to do. If a date is at risk we cut scope with account management. I do not take the file.',
       timeline: 'Weeks 2 to 8',
-      owner: 'Me. Exception log visible to the GM weekly.',
-      kpis: [
-        'Client first drafts produced by me per week (target: zero)',
-        'Briefs owned end to end by a designer',
-        'Paired coaching sessions delivered',
-        'Logged exceptions and the reason for each'
-      ],
-      why: 'Critical. This is the behaviour the GM named directly. Nothing else in this plan works while I remain the fastest route to a finished asset.',
-      risk: 'Output quality dips in the short term. Deadlines feel tighter while people learn.',
-      mitigation: 'I stay accountable for the outcome and available for coaching, but not for production. Where a deadline is genuinely at risk we reduce scope with account management, instead of me taking the file back.',
-      outcome: 'Capability grows instead of work being rescued. My time moves to the work only a lead can do.'
+      metric: 'First drafts made by me each week. Target is zero, with every exception written down.',
+      priLabel: 'Critical'
     },
     {
       n: '03', pri: 'critical',
-      title: 'Fix the communication cadence',
-      sub: 'Communication · Alignment before execution, not during it',
-      gap: 'One to one meetings are behind. Alignment happens in passing during delivery rather than before it starts.',
-      impact: 'Rework, missed expectations, and people who do not know where they stand. It also hides problems until they are expensive to fix.',
-      cause: 'I did not protect the time. Client meetings and delivery filled the calendar, and the one to ones were always the first thing I moved.',
+      title: 'We do not talk enough',
+      tag: 'Communication',
+      now: 'My one to one meetings are late. We talk while we deliver, not before we start.',
+      cost: 'Work gets redone. People do not know where they stand. Problems stay hidden until they cost money.',
       steps: [
-        'Book every one to one for the full 8 weeks in Week 1 as a recurring block that does not move.',
-        'Fixed agenda: work in progress, one blocker, one development topic, feedback in both directions.',
-        'Written notes shared with the person within 24 hours, with agreed actions.',
-        'A 30 minute weekly team planning session at a fixed time where the week is agreed publicly.'
+        'Book every one to one for the full eight weeks in Week 1. These blocks do not move.',
+        'Same agenda every time: the work, one blocker, one skill to grow, and feedback in both directions.',
+        'Send written notes to the person within 24 hours.',
+        'One 30 minute team planning meeting each week, at a fixed time, where we agree the week together.'
       ],
+      risk: 'These can turn into status updates. The agenda puts growth first. If we run out of time, status is cut, not the growth part.',
       timeline: 'Week 1 onward',
-      owner: 'Me',
-      kpis: [
-        'One to one completion rate (target: 100%, none pushed into the next week)',
-        'Weekly planning sessions held',
-        'Briefs with written expectations agreed before work starts',
-        'Team clarity score from the anonymous survey, Week 1 against Week 8'
-      ],
-      why: 'Critical. It costs nothing, it is fully within my control, and it is the mechanism every other initiative in this plan depends on.',
-      risk: 'The sessions turn into status updates instead of development conversations.',
-      mitigation: 'The agenda puts development before status. If the session runs short of time, status is cut, not development.',
-      outcome: 'Problems surface early, expectations are agreed before work starts, and each designer has a clear line of sight on their own growth.'
+      metric: 'One to one meetings held in the week they were booked. Target is 100%.',
+      priLabel: 'Critical'
     },
     {
       n: '04', pri: 'high',
-      title: 'Reset the change agenda',
-      sub: 'Change management · Four changes in 90 days with no adoption plan',
-      gap: 'I introduced an AI workflow, vibe coding, new creative processes and typography campaign thinking inside 90 days. Adoption was partial and resistance followed.',
-      impact: 'Half adopted change is worse than no change. The company carries the disruption cost without collecting the productivity gain.',
-      cause: 'Change volume, not team attitude. Four changes at once, each announced rather than co-designed, with no clear answer to what it does for the person being asked to change, and no time to absorb any one of them.',
+      title: 'Only one person grew',
+      tag: 'Team development',
+      now: 'Mahmoud grew a lot. The others did not grow at the same speed. The gap between the strongest and the rest is getting wider.',
+      cost: 'One strong designer is a second risk, not a fix. A wide gap between people is a delivery risk and a reason good people leave.',
       steps: [
-        'Freeze new initiatives for 60 days. One exception only, agreed with the GM.',
-        'Select one change to finish properly: the AI production workflow.',
-        'Co-design the adoption steps with the two people furthest from it, not with the people already convinced.',
-        'Name two champions and give them the sessions, so the change does not come from me.',
-        'Publish an adoption ladder defining what level 1, 2 and 3 use looks like, so progress is visible.'
+        'Score a skills sheet for all five people with the GM in Week 3.',
+        'One growth plan per person, with one skill to work on for the 60 days.',
+        'Track my coaching hours per person and fix the gap on purpose.',
+        'Mahmoud teaches one skill to the others, so his growth becomes the team&#39;s growth.'
       ],
+      risk: 'Growth plans can become paper nobody uses. Each plan has one skill and one proof, and we review it inside the one to one. No extra meeting.',
       timeline: 'Weeks 3 to 8',
-      owner: 'Me, with two named champions from the team.',
-      kpis: [
-        'New initiatives introduced in the period (target: 1, not 4)',
-        'Adoption level per person against the published ladder',
-        'Sessions led by team members rather than by me'
-      ],
-      why: 'High. It protects the investment already made in these tools, and it is the clearest test of whether I can lead a change rather than announce one.',
-      risk: 'The freeze is read as retreating from the improvements.',
-      mitigation: 'The freeze is about sequencing, not about the value of the tools. The backlog stays visible so the GM can see exactly what is queued for the next cycle.',
-      outcome: 'One change fully adopted across the whole team is worth more than four changes half used.'
+      metric: 'Coaching hours per person, and the gap between the highest and the lowest. All five move on the skills sheet, not one.',
+      priLabel: 'High'
     },
     {
       n: '05', pri: 'high',
-      title: 'Balance the team development',
-      sub: 'Team management · One person grew, the rest did not grow at the same rate',
-      gap: 'Mahmoud improved significantly. The others did not move at the same pace, and the gap between the strongest and the rest is widening.',
-      impact: 'One strong designer is a second dependency, not a solution. The capability gap is a delivery risk and a retention risk at the same time.',
-      cause: 'I invested where the return came fastest. Mahmoud responded quickest so he got most of my time. I also confused "understands my thinking" with "capable independently". They are not the same thing.',
+      title: 'I pushed too many changes, too fast',
+      tag: 'Change management',
+      now: 'I brought in an AI workflow, vibe coding, new processes and campaign typography inside 90 days. Some people pushed back.',
+      cost: 'A change that is half used costs the company the disruption and gives back none of the benefit.',
       steps: [
-        'Score a written skills matrix for all five people jointly with the GM in Week 3. Not self assessment alone.',
-        'One development plan per person with a single named target skill for the 60 days.',
-        'Track coaching time per person weekly and correct the imbalance on purpose.',
-        'Mahmoud becomes a peer coach on one named skill, which converts his growth into the team&#39;s growth.'
+        'Stop starting new things for 60 days. One exception only, agreed with the GM.',
+        'Finish one change properly: the AI workflow.',
+        'Build the steps with the two people who like it least, not with the people who already agree.',
+        'Name two people from the team to lead the sessions, so the change does not come from me.',
+        'Write three simple levels of use, so everyone can see where they are.'
       ],
+      risk: 'Stopping new ideas can look like giving up on them. It is about order, not value. The waiting list stays visible so the GM can see what comes next.',
       timeline: 'Weeks 3 to 8',
-      owner: 'Me, scored jointly with the GM.',
-      kpis: [
-        'Coaching hours per person, and the gap between highest and lowest',
-        'Skills matrix movement for each of the five',
-        'Peer coaching sessions delivered by team members'
-      ],
-      why: 'High. It answers the GM point directly and turns a single success into a method that can be repeated.',
-      risk: 'Development plans become paperwork that nobody uses.',
-      mitigation: 'Each plan has one target skill and one measurable proof, and it is reviewed inside the existing one to one. No extra meeting is created.',
-      outcome: 'Capability spread across the team rather than concentrated in one person and in me.'
+      metric: 'New changes started in the period. Target is 1, not 4. Level of use for each person.',
+      priLabel: 'High'
     },
     {
-      n: '06', pri: 'high',
-      title: 'Build prioritisation and capacity control',
-      sub: 'Prioritisation and time management · Everything is urgent and I absorb the overflow',
-      gap: 'Work is prioritised per request rather than per week, and when capacity runs out I absorb it with my own hours.',
-      impact: 'Unpredictable delivery, no early warning on overload, and a lead working at a rate that is neither sustainable nor repeatable by a successor.',
-      cause: 'There is no capacity model and no triage rule. Working late was the release valve that kept the problem invisible.',
+      n: '06', pri: 'medium',
+      title: 'What I know is only in my head',
+      tag: 'Knowledge sharing',
+      now: 'The quality rules, the AI methods and the account details live mostly with me. I teach by review, one person at a time.',
+      cost: 'The three new people take too long to become useful. Two designers can do the same account in two different ways.',
       steps: [
-        'Build a simple capacity view: committed work against available design days per week.',
-        'Weekly triage with account management: what ships, what moves, what gets reduced in scope.',
-        'Set work in progress limits per designer.',
-        'Escalation rule: when capacity is exceeded it goes to the GM as a scope decision, not into my evenings.'
+        'Write the quality rules on one page that a junior can use.',
+        'One 30 minute sharing session each week, led by a team member, not by me.',
+        'Build the shared brand and asset library that is already proposed.',
+        'One page per account: brand rules, tone, what to do and what not to do.'
       ],
-      timeline: 'Weeks 2 to 5',
-      owner: 'Me, with account management.',
-      kpis: [
-        'On time delivery rate',
-        'Items in progress per designer against the limit',
-        'My own weekly hours',
-        'Scope escalations raised through the proper route (a rising number here is a good sign)'
-      ],
-      why: 'High. Without it, delegation only moves the overload around instead of removing it.',
-      risk: 'Saying no to work is read as reduced service to the client.',
-      mitigation: 'Every escalation presents options rather than a refusal: reduce scope, move the date, or add capacity. The GM makes the call with the data in front of him.',
-      outcome: 'Predictable delivery, overload visible before it happens, and a workload a successor could actually carry.'
-    },
-    {
-      n: '07', pri: 'medium',
-      title: 'Move knowledge out of my head',
-      sub: 'Knowledge sharing · Documentation and onboarding',
-      gap: 'The creative standard, the AI methods and the account knowledge live mostly with me.',
-      impact: 'Slow onboarding for the three new hires, inconsistent output between designers, and a hard stop whenever I am unavailable.',
-      cause: 'I taught by review and by example. That works one person at a time and leaves nothing behind when the session ends.',
-      steps: [
-        'Write the creative standard as a one page checklist a junior can use.',
-        'One 30 minute knowledge session per week, led by a team member on rotation, not by me.',
-        'Build the shared asset and brand file library currently sitting as a proposal.',
-        'One page brief per account: brand rules, tone, what to do and what not to do.'
-      ],
+      risk: 'Documents go out of date. The account owner owns their page and updates it when something changes. We check it in the one to one.',
       timeline: 'Weeks 3 to 8',
-      owner: 'Rotating across the team, coordinated by me.',
-      kpis: [
-        'Accounts with a completed one page brief',
-        'Knowledge sessions held',
-        'Share of sessions led by team members rather than by me',
-        'Time for the three new hires to reach first unassisted release'
-      ],
-      why: 'Medium. High value, but it depends on Initiatives 01 and 02 landing first. Documenting a standard nobody is allowed to apply changes nothing.',
-      risk: 'Documentation is written once and then goes stale.',
-      mitigation: 'The account owner owns their one page brief and updates it at the point of change. It is checked inside the one to one, not in a separate audit.',
-      outcome: 'Knowledge becomes a company asset instead of a personal one, and new hires reach the standard faster.'
-    },
-    {
-      n: '08', pri: 'medium',
-      title: 'Stop being the relay between teams',
-      sub: 'Cross-functional communication · Context reaches the person doing the work',
-      gap: 'I act as the relay between design and the content, performance and development teams.',
-      impact: 'Briefs arrive incomplete, creative drifts from the campaign objective, and I become a bottleneck on information as well as on approvals.',
-      cause: 'I joined the meetings myself because it was faster than briefing someone else to attend. That kept the context with me instead of with the designer.',
-      steps: [
-        'The account owner attends the campaign kick off directly. I attend only where the client relationship requires it.',
-        'Agree one shared brief template with content and performance, including the fields currently missing.',
-        'Designers see the campaign objective and, afterwards, the performance result of the work they produced.'
-      ],
-      timeline: 'Weeks 4 to 8',
-      owner: 'Me, agreed with the content and performance leads.',
-      kpis: [
-        'Briefs returned for missing information',
-        'Cross team meetings attended by a designer rather than by me',
-        'Accounts where the designer has seen the performance result'
-      ],
-      why: 'Medium. Meaningful, but it depends on account ownership from Initiative 01 being in place first.',
-      risk: 'Other teams keep routing everything through me out of habit.',
-      mitigation: 'I redirect rather than answer, and I tell the other leads what I am doing and why, so it does not read as disengagement.',
-      outcome: 'Context reaches the person doing the work, and design decisions connect to campaign results.'
+      metric: 'Accounts with a written page. Target is all 12. Share of sessions led by the team, not by me.',
+      priLabel: 'Medium'
     }
   ];
 
-  var host = document.getElementById('inits');
+  var host = document.getElementById('gaps');
   if (!host) return;
 
-  var PRI_LABEL = { critical: 'Critical', high: 'High', medium: 'Medium', low: 'Low' };
-
-  INITIATIVES.forEach(function (it, i) {
+  GAPS.forEach(function (g, i) {
     var art = document.createElement('article');
-    art.className = 'init' + (i === 0 ? ' is-open' : '');
-
-    function list(items) {
-      return '<ul>' + items.map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ul>';
-    }
+    art.className = 'gap' + (i === 0 ? ' is-open' : '');
 
     art.innerHTML =
-      '<button class="init__hd" type="button" aria-expanded="' + (i === 0) + '">' +
-        '<span class="init__n">' + it.n + '</span>' +
-        '<span class="init__t"><b>' + it.title + '</b><span>' + it.sub + '</span></span>' +
-        '<span class="init__pri pri--' + it.pri + '">' + PRI_LABEL[it.pri] + '</span>' +
-        '<span class="init__chev"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>' +
+      '<button class="gap__hd" type="button" aria-expanded="' + (i === 0) + '">' +
+        '<span class="gap__n">' + g.n + '</span>' +
+        '<span class="gap__t"><b>' + g.title + '</b><span>' + g.tag + '</span></span>' +
+        '<span class="gap__pri pri--' + g.pri + '">' + g.priLabel + '</span>' +
+        '<span class="gap__chev"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>' +
       '</button>' +
-      '<div class="init__bd"><div><div class="init__in">' +
-        '<div class="fld"><b>Current gap</b><p>' + it.gap + '</p></div>' +
-        '<div class="fld"><b>Business impact</b><p>' + it.impact + '</p></div>' +
-        '<div class="fld fld--wide"><b>Root cause</b><p>' + it.cause + '</p></div>' +
-        '<div class="fld fld--wide"><b>Action steps</b>' + list(it.steps) + '</div>' +
-        '<div class="fld"><b>Timeline</b><p>' + it.timeline + '</p></div>' +
-        '<div class="fld"><b>Owner</b><p>' + it.owner + '</p></div>' +
-        '<div class="fld fld--wide"><b>Success metrics</b>' + list(it.kpis) + '</div>' +
-        '<div class="fld"><b>Why this priority</b><p>' + it.why + '</p></div>' +
-        '<div class="fld fld--risk"><b>Main risk</b><p>' + it.risk + '</p></div>' +
-        '<div class="fld fld--wide"><b>Mitigation</b><p>' + it.mitigation + '</p></div>' +
-        '<div class="fld fld--wide fld--out"><b>Expected business outcome</b><p>' + it.outcome + '</p></div>' +
+      '<div class="gap__bd"><div><div class="gap__in">' +
+        '<div class="gap__two">' +
+          '<div class="fld"><b>What happens now</b><p>' + g.now + '</p></div>' +
+          '<div class="fld"><b>What it costs us</b><p>' + g.cost + '</p></div>' +
+        '</div>' +
+        '<div class="sol">' +
+          '<span class="sol__lb">Solution</span>' +
+          '<ul>' + g.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ul>' +
+          '<p class="sol__risk"><b>Main risk and how I handle it:</b> ' + g.risk + '</p>' +
+          '<div class="sol__meta">' +
+            '<div class="sol__m"><b>Timeline</b><span>' + g.timeline + '</span></div>' +
+            '<div class="sol__m"><b>How we measure it</b><span>' + g.metric + '</span></div>' +
+            '<div class="sol__m"><b>Priority</b><span class="sol__p pri--' + g.pri + '">' + g.priLabel + '</span></div>' +
+          '</div>' +
+        '</div>' +
       '</div></div></div>';
 
-    var hd = art.querySelector('.init__hd');
+    var hd = art.querySelector('.gap__hd');
     hd.addEventListener('click', function () {
       var open = art.classList.toggle('is-open');
       hd.setAttribute('aria-expanded', String(open));
@@ -255,11 +150,11 @@
     host.appendChild(art);
   });
 
-  // Print: every initiative must be readable in the PDF
+  // Print: every card must be readable in the PDF
   function expandAll() {
-    document.querySelectorAll('.init').forEach(function (a) {
+    document.querySelectorAll('.gap').forEach(function (a) {
       a.classList.add('is-open');
-      var hd = a.querySelector('.init__hd');
+      var hd = a.querySelector('.gap__hd');
       if (hd) hd.setAttribute('aria-expanded', 'true');
     });
   }
