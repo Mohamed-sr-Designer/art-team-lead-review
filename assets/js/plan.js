@@ -8,105 +8,105 @@
   var GAPS = [
     {
       n: '01', pri: 'critical',
-      title: 'The team waits for me',
-      tag: 'Team dependency',
-      now: 'Work stops at my desk. Nobody sends anything to a client before I look at it. No account has an owner except me.',
-      cost: 'If I am not here, the work stops. That is a risk on every client, every week. It is also the reason my manager said the team would struggle without me.',
+      title: 'Move from central review to distributed ownership',
+      tag: 'Ownership model',
+      situation: 'Review and final sign off currently sit close to the lead. That was the right model while the quality bar was being set and while three new designers were joining. It has served its purpose, and it is now the limit on how quickly the function can take on more work.',
+      impact: 'Concentrated review caps throughput at one person&#39;s calendar and delays the point where senior designers take commercial responsibility. Distributing ownership raises capacity without raising headcount, and builds the bench we need for the next set of accounts.',
       steps: [
-        'Give every account a named owner. The owner also talks to the client.',
-        'Write the quality rules on one page, so a designer can check their own work.',
-        'Write down who decides what: alone, with a colleague, or with me.',
-        'In Week 6 I review nothing for three days. We write down what breaks and we fix it.'
+        'Assign a named owner to each account, responsible for the client relationship as well as the output.',
+        'Publish the creative standard as a one page checklist, so designers can validate their own work before it moves.',
+        'Define decision rights in writing: what the owner decides, what needs a peer review, and what comes to me.',
+        'Run a structured three day handover exercise in Week 6 where the team approves its own releases, and use the findings to close whatever is still missing.'
       ],
-      risk: 'Quality can drop while people take over. I hand over one account per person per week, never all at once, and every first release gets a check from a colleague.',
+      risk: 'Some variance in quality during the transition. Mitigated by staging the handover at one account per designer per week, requiring a peer review on first releases, and keeping lead accountability for client outcomes throughout.',
       timeline: 'Weeks 1 to 6',
-      metric: 'All 12 accounts have an owner. Work released without my review goes up each week.',
+      metric: '12 of 12 accounts with a named owner. Share of work released under owner authority trending up week on week. Handover exercise completed with a written outcome report.',
       priLabel: 'Critical'
     },
     {
       n: '02', pri: 'critical',
-      title: 'I do the work instead of teaching it',
-      tag: 'Solo player',
-      now: 'When quality is at risk I make the design myself. It is the fastest way to a good result today, and it teaches nobody.',
-      cost: 'The team stays the same while my hours go up. The company pays for a team lead and gets a designer.',
+      title: 'Convert lead time from production into capability',
+      tag: 'Leverage',
+      situation: 'A meaningful share of my week still goes into producing work directly, mostly on high stakes briefs. It protects quality on the day, but it is a low leverage use of a lead role.',
+      impact: 'Time spent producing is time not spent multiplying capability. Every hour moved into coaching returns across every brief that designer touches afterwards. It is the difference between a team that delivers this quarter and a team that keeps delivering next year.',
       steps: [
-        'From Week 2 I make no first drafts for clients. If I break this rule I write down why.',
-        'When someone brings me a problem, I ask three questions before I give an answer.',
-        'Work I would have made myself becomes a session where the designer works and I coach.',
-        'I report how much I produced each week, so this is easy to check.'
+        'From Week 2, first drafts on client work stay with the designer. Exceptions are documented with the reason.',
+        'Replace direct production with paired sessions where the designer holds the file and I direct.',
+        'Answer problems with questions first, so the reasoning transfers rather than just the fix.',
+        'Report my production hours weekly, so the shift is visible rather than asserted.'
       ],
-      risk: 'The first tight deadline will make taking the file back look like the right thing to do. If a date is at risk we cut scope with account management. I do not take the file.',
+      risk: 'Pressure on genuinely tight deadlines. Mitigated by resolving capacity conflicts through a scope conversation with account management, rather than by absorbing production back to the lead.',
       timeline: 'Weeks 2 to 8',
-      metric: 'First drafts made by me each week. Target is zero, with every exception written down.',
+      metric: 'Lead hours on client first drafts, trending to zero with documented exceptions. Briefs delivered end to end by a designer. Paired sessions delivered per week.',
       priLabel: 'Critical'
     },
     {
       n: '03', pri: 'critical',
-      title: 'We do not talk enough',
-      tag: 'Communication',
-      now: 'My one to one meetings are late. We talk while we deliver, not before we start.',
-      cost: 'Work gets redone. People do not know where they stand. Problems stay hidden until they cost money.',
+      title: 'Establish a predictable communication rhythm',
+      tag: 'Alignment',
+      situation: 'One to ones and weekly planning have been inconsistent, mostly because delivery commitments have won the calendar. Alignment has been happening during execution rather than ahead of it.',
+      impact: 'Late alignment is the most common source of rework. A fixed cadence moves clarification to the front of the process, where it is cheapest, and gives every designer a reliable channel for development rather than an occasional one.',
       steps: [
-        'Book every one to one for the full eight weeks in Week 1. These blocks do not move.',
-        'Same agenda every time: the work, one blocker, one skill to grow, and feedback in both directions.',
-        'Send written notes to the person within 24 hours.',
-        'One 30 minute team planning meeting each week, at a fixed time, where we agree the week together.'
+        'Schedule all one to ones and the weekly planning session for the full 60 days in Week 1, as protected blocks.',
+        'Standardise the agenda: current work, active blockers, development focus, and feedback in both directions.',
+        'Circulate written notes and agreed actions within 24 hours.',
+        'Hold a 30 minute team planning session each week, so priorities are agreed openly rather than issued.'
       ],
-      risk: 'These can turn into status updates. The agenda puts growth first. If we run out of time, status is cut, not the growth part.',
-      timeline: 'Week 1 onward',
-      metric: 'One to one meetings held in the week they were booked. Target is 100%.',
+      risk: 'Sessions drifting into status reporting. Mitigated by putting development ahead of status on the agenda, and by testing usefulness through the anonymous team survey in Week 8.',
+      timeline: 'Week 1 onward, sustained',
+      metric: 'One to one completion at 100% within the scheduled week. Weekly planning sessions held. Share of briefs with written expectations agreed before work starts.',
       priLabel: 'Critical'
     },
     {
       n: '04', pri: 'high',
-      title: 'Only one person grew',
-      tag: 'Team development',
-      now: 'Mahmoud grew a lot. The others did not grow at the same speed. The gap between the strongest and the rest is getting wider.',
-      cost: 'One strong designer is a second risk, not a fix. A wide gap between people is a delivery risk and a reason good people leave.',
+      title: 'Broaden development beyond the strongest performers',
+      tag: 'Team capability',
+      situation: 'Development has moved fastest where it met the least friction. Mahmoud has progressed significantly. The rest of the team has moved more slowly, and my coaching time has not been distributed evenly.',
+      impact: 'Capability concentrated in a small number of people limits which accounts we can staff with confidence. Broad based development increases how many briefs can run in parallel, and it is one of the strongest retention levers we have.',
       steps: [
-        'Score a skills sheet for all five people with the GM in Week 3.',
-        'One growth plan per person, with one skill to work on for the 60 days.',
-        'Track my coaching hours per person and fix the gap on purpose.',
-        'Mahmoud teaches one skill to the others, so his growth becomes the team&#39;s growth.'
+        'Score a written skills matrix for the full team, jointly with the GM, in Week 3.',
+        'Agree one development objective per designer for the 60 day period.',
+        'Track coaching hours per person weekly and rebalance deliberately, not by instinct.',
+        'Convert Mahmoud&#39;s progress into peer coaching, so one person&#39;s growth becomes the team&#39;s.'
       ],
-      risk: 'Growth plans can become paper nobody uses. Each plan has one skill and one proof, and we review it inside the one to one. No extra meeting.',
+      risk: 'Development plans becoming administrative rather than useful. Mitigated by limiting each plan to one objective with one observable proof point, reviewed inside the existing one to one rather than through a separate process.',
       timeline: 'Weeks 3 to 8',
-      metric: 'Coaching hours per person, and the gap between the highest and the lowest. All five move on the skills sheet, not one.',
+      metric: 'Coaching hours per designer, with the variance between highest and lowest narrowing. Movement on the skills matrix across the full team. Peer coaching sessions delivered by team members.',
       priLabel: 'High'
     },
     {
       n: '05', pri: 'high',
-      title: 'I pushed too many changes, too fast',
+      title: 'Sequence change for adoption, not for speed',
       tag: 'Change management',
-      now: 'I brought in an AI workflow, vibe coding, new processes and campaign typography inside 90 days. Some people pushed back.',
-      cost: 'A change that is half used costs the company the disruption and gives back none of the benefit.',
+      situation: 'Four capability changes were introduced in the first quarter: AI production, in house web build, campaign typography systems and a revised creative process. The tools are sound and the direction is right. Adoption is uneven because they arrived in parallel rather than in sequence.',
+      impact: 'Partially adopted change delivers the disruption without the return. Sequencing the rollout protects the investment already made, and makes each capability durable rather than dependent on the person who introduced it.',
       steps: [
-        'Stop starting new things for 60 days. One exception only, agreed with the GM.',
-        'Finish one change properly: the AI workflow.',
-        'Build the steps with the two people who like it least, not with the people who already agree.',
-        'Name two people from the team to lead the sessions, so the change does not come from me.',
-        'Write three simple levels of use, so everyone can see where they are.'
+        'Hold new initiatives for the 60 day period, with one agreed exception.',
+        'Complete adoption of the AI production workflow before opening anything else.',
+        'Design the rollout with the people furthest from the change, not only with the early adopters.',
+        'Appoint two adoption leads from inside the team to run the sessions.',
+        'Publish a three level competency ladder, so progress is visible and people can place themselves on it.'
       ],
-      risk: 'Stopping new ideas can look like giving up on them. It is about order, not value. The waiting list stays visible so the GM can see what comes next.',
+      risk: 'The hold being read as a drop in ambition. Mitigated by keeping a visible, dated backlog so the sequencing logic and the next cycle are clear to everyone.',
       timeline: 'Weeks 3 to 8',
-      metric: 'New changes started in the period. Target is 1, not 4. Level of use for each person.',
+      metric: 'One initiative introduced in the period. Competency level per designer against the ladder, with the full team at level 2 or above. Share of sessions led by team members.',
       priLabel: 'High'
     },
     {
       n: '06', pri: 'medium',
-      title: 'What I know is only in my head',
-      tag: 'Knowledge sharing',
-      now: 'The quality rules, the AI methods and the account details live mostly with me. I teach by review, one person at a time.',
-      cost: 'The three new people take too long to become useful. Two designers can do the same account in two different ways.',
+      title: 'Codify the standard so it scales past any one person',
+      tag: 'Documentation',
+      situation: 'The creative standard, the AI methods and much of the account context are held informally. Knowledge has transferred through review and example, which works well one designer at a time and does not scale beyond that.',
+      impact: 'Undocumented standards slow onboarding, which is a live cost with three recent hires, and allow quality to vary between designers on the same account. Written standards make quality repeatable and make future hiring far faster to absorb.',
       steps: [
-        'Write the quality rules on one page that a junior can use.',
-        'One 30 minute sharing session each week, led by a team member, not by me.',
-        'Build the shared brand and asset library that is already proposed.',
-        'One page per account: brand rules, tone, what to do and what not to do.'
+        'Publish the creative standard as a one page checklist that works without supervision.',
+        'Run a 30 minute knowledge session each week, led by rotating team members.',
+        'Build the shared brand and asset library already proposed.',
+        'Produce a one page reference per account covering brand rules, tone and boundaries, owned by the account owner.'
       ],
-      risk: 'Documents go out of date. The account owner owns their page and updates it when something changes. We check it in the one to one.',
+      risk: 'Documentation going stale. Mitigated by assigning it to the account owner and checking currency inside the existing one to one, rather than running a separate audit nobody has time for.',
       timeline: 'Weeks 3 to 8',
-      metric: 'Accounts with a written page. Target is all 12. Share of sessions led by the team, not by me.',
+      metric: '12 of 12 accounts with a current reference page. Knowledge sessions delivered, majority led by team members. Time to first unsupervised release for the three new designers.',
       priLabel: 'Medium'
     }
   ];
@@ -127,16 +127,16 @@
       '</button>' +
       '<div class="gap__bd"><div><div class="gap__in">' +
         '<div class="gap__two">' +
-          '<div class="fld"><b>What happens now</b><p>' + g.now + '</p></div>' +
-          '<div class="fld"><b>What it costs us</b><p>' + g.cost + '</p></div>' +
+          '<div class="fld"><b>Current situation</b><p>' + g.situation + '</p></div>' +
+          '<div class="fld"><b>Business impact</b><p>' + g.impact + '</p></div>' +
         '</div>' +
         '<div class="sol">' +
-          '<span class="sol__lb">Solution</span>' +
+          '<span class="sol__lb">Action plan</span>' +
           '<ul>' + g.steps.map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ul>' +
-          '<p class="sol__risk"><b>Main risk and how I handle it:</b> ' + g.risk + '</p>' +
+          '<p class="sol__risk"><b>Risks and mitigation:</b> ' + g.risk + '</p>' +
           '<div class="sol__meta">' +
             '<div class="sol__m"><b>Timeline</b><span>' + g.timeline + '</span></div>' +
-            '<div class="sol__m"><b>How we measure it</b><span>' + g.metric + '</span></div>' +
+            '<div class="sol__m"><b>Success metrics</b><span>' + g.metric + '</span></div>' +
             '<div class="sol__m"><b>Priority</b><span class="sol__p pri--' + g.pri + '">' + g.priLabel + '</span></div>' +
           '</div>' +
         '</div>' +
