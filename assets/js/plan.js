@@ -1,26 +1,26 @@
 /* ==========================================================================
    60-Day Action Plan — initiative list
-   Headline items only. Detail is delivered verbally in the review, so the
-   rows are deliberately static: no toggle, no body copy.
+   Headline items only. The detail is explained in the meeting, so the rows
+   are deliberately static: no toggle, no body copy.
    ========================================================================== */
 (function () {
   'use strict';
 
   var GAPS = [
     { n: '01', pri: 'critical', priLabel: 'Critical',
-      title: 'Convert lead time from production into capability',
-      tag: 'Leverage' },
+      title: 'Move my time from doing the work to coaching',
+      tag: 'Coaching' },
     { n: '02', pri: 'critical', priLabel: 'Critical',
-      title: 'Establish a predictable communication rhythm',
-      tag: 'Alignment' },
+      title: 'Set a fixed weekly rhythm for talking to the team',
+      tag: 'Communication' },
     { n: '03', pri: 'high', priLabel: 'High',
-      title: 'Broaden development beyond the strongest performers',
-      tag: 'Team capability' },
+      title: 'Grow the whole team, not only the strongest',
+      tag: 'Team growth' },
     { n: '04', pri: 'high', priLabel: 'High',
-      title: 'Sequence change for adoption, not for speed',
-      tag: 'Change management' },
+      title: 'Bring in one change at a time',
+      tag: 'Change' },
     { n: '05', pri: 'medium', priLabel: 'Medium',
-      title: 'Codify the standard so it scales past any one person',
+      title: 'Write the standard down so anyone can use it',
       tag: 'Documentation' }
   ];
 

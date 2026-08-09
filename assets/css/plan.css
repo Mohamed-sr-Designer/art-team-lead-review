@@ -57,16 +57,6 @@
   letter-spacing: -0.022em; color: var(--navy); line-height: 1.25;
 }
 
-/* Language switch */
-.langsw {
-  display: inline-flex; align-items: center; gap: .4rem; flex-shrink: 0;
-  border: 1px solid var(--line-2); border-radius: 100px; background: var(--card);
-  padding: .42rem .9rem; font-size: .78rem; font-weight: 600; color: var(--navy);
-  transition: border-color .22s var(--ease), background .22s var(--ease);
-}
-.langsw:hover { border-color: var(--navy); background: var(--bg-2); }
-.langsw svg { width: 14px; height: 14px; color: var(--text-3); }
-
 /* ---------- Part 1 · Gaps and solutions ---------- */
 .gaps { display: grid; gap: .7rem; }
 .gap {
@@ -121,22 +111,22 @@
   padding: .3rem .6rem; border-radius: 100px; border: 1px solid; white-space: nowrap;
 }
 
-.rule {
+.howto {
   border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--card);
   padding: clamp(1.4rem, 3vw, 2rem); box-shadow: var(--sh-2);
 }
-.rule > h3 { font-size: clamp(1.15rem, 2.2vw, 1.5rem); margin-bottom: .5rem; }
-.rule > p { font-size: .9rem; line-height: 1.6; max-width: 68ch; }
-.rule__steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .7rem; margin-top: 1.4rem; }
-@media (max-width: 900px) { .rule__steps { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 540px) { .rule__steps { grid-template-columns: 1fr; } }
-.rule__s {
+.howto > h3 { font-size: clamp(1.15rem, 2.2vw, 1.5rem); margin-bottom: .5rem; }
+.howto > p { font-size: .9rem; line-height: 1.6; max-width: 68ch; }
+.howto__steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .7rem; margin-top: 1.4rem; }
+@media (max-width: 900px) { .howto__steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .howto__steps { grid-template-columns: 1fr; } }
+.howto__s {
   border: 1px solid var(--line); border-radius: var(--r-md); background: var(--bg-2);
   padding: 1rem 1.05rem; display: grid; gap: .28rem; align-content: start;
 }
-.rule__s i { font-style: normal; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .13em; color: var(--orange); }
-.rule__s b { font-size: .88rem; font-weight: 620; color: var(--navy); letter-spacing: -0.014em; }
-.rule__s span { font-size: .8rem; color: var(--text-3); line-height: 1.5; }
+.howto__s i { font-style: normal; font-family: var(--font-mono); font-size: .58rem; letter-spacing: .13em; color: var(--orange); }
+.howto__s b { font-size: .88rem; font-weight: 620; color: var(--navy); letter-spacing: -0.014em; }
+.howto__s span { font-size: .8rem; color: var(--text-3); line-height: 1.5; }
 
 /* ---------- Part 4 · Team development ---------- */
 .grps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
@@ -266,46 +256,6 @@
 .commit__sg b { font-family: var(--font-mono); font-size: .58rem; letter-spacing: .13em; text-transform: uppercase; color: rgba(244,247,250,.45); }
 .commit__sg span { font-size: .93rem; color: #fff; font-weight: 560; }
 .commit__line { display: block; width: 190px; height: 1px; background: rgba(255,255,255,.2); margin-top: .9rem; }
-
-/* ==========================================================================
-   RTL · Arabic edition
-   Most of the layout already uses logical properties. This block fixes the
-   handful of places that are direction aware.
-   ========================================================================== */
-[dir="rtl"] body,
-[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 {
-  font-family: var(--font-ar);
-  letter-spacing: 0;
-}
-[dir="rtl"] .mono,
-[dir="rtl"] .sec-head__tag,
-[dir="rtl"] .sec-head__num,
-[dir="rtl"] .gap__t span,
-[dir="rtl"] .gap__pri,
-[dir="rtl"] .rank__p,
-[dir="rtl"] .rule__s i,
-[dir="rtl"] .grp__lb,
-[dir="rtl"] .grp__blk > b,
-[dir="rtl"] .grp__out > b,
-[dir="rtl"] .twide__c i,
-[dir="rtl"] .base,
-[dir="rtl"] .targ,
-[dir="rtl"] .commit__tag,
-[dir="rtl"] .commit__sg b,
-[dir="rtl"] .hero__eyebrow,
-[dir="rtl"] .foot__meta { letter-spacing: .02em; }
-
-/* Arabic reads better with slightly more line height in body copy */
-[dir="rtl"] .grp__blk li, [dir="rtl"] .rank__why, [dir="rtl"] .lede { line-height: 1.75; }
-
-/* Mirror the direction aware bits */
-[dir="rtl"] .btn svg,
-[dir="rtl"] .close__actions .btn svg { transform: scaleX(-1); }
-[dir="rtl"] .rank__r:hover { transform: translateX(-3px); }
-[dir="rtl"] .mem { padding-inline: .3rem .8rem; }
-
-/* Western digits already render left to right inside an RTL run, so they need
-   no direction override. Setting one would flip their alignment as well. */
 
 /* ---------- Print ---------- */
 @media print {
