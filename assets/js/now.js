@@ -131,7 +131,7 @@
   function doc(id, title, pages) { return { t: 'print', id: id, title: title, pages: pages }; }
 
   var CLIENTS = [
-    { key: 'nofodh', name: 'Nofodh Real Estate', sub: 'New account · five projects', items: [
+    { key: 'nofodh', name: 'Nofodh Real Estate', sub: 'New account', items: [
       vid('bb2-v1', 'Baleine Bleu Maison 2 · film with AI voice over', 'AI voice over'),
       vid('bb2-v2', 'Baleine Bleu Maison 2 · film'),
       vid('nofodh-v1', 'Nofodh · brand film'),
@@ -146,7 +146,7 @@
       doc('almosa', 'Almosa Residence 2 · brochure', 10),
       doc('woroud', 'Woroud Almosa · scheme brochure', 8)
     ] },
-    { key: 'shield', name: 'Arabian Shield Cooperative Insurance', sub: 'New account', items: [
+    { key: 'shield', name: 'Arabian Shield Cooperative Insurance', sub: 'Social', items: [
       img('shield-1', 'Arabian Shield · Father’s Day'),
       img('shield-2', 'Arabian Shield · breast cancer awareness')
     ] },

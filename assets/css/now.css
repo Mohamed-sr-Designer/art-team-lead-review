@@ -417,3 +417,17 @@ a.nw-tr:hover { background: #FFF6EE; }
 }
 .nw-group[data-t="video"] .nw-grid { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
 @media (max-width: 640px) { .nw-group[data-t="video"] .nw-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Account folders (as in the team drive) */
+.nw-sum--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.nw-folders { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; }
+.nw-folders li {
+  display: inline-flex; align-items: center; gap: .45rem; font-size: .8rem; font-weight: 560; color: var(--nw-ink);
+  background: #EEF1F6; border-radius: 8px; padding: .38rem .65rem; white-space: nowrap;
+}
+.nw-folders li::before {
+  content: ""; width: 14px; height: 11px; flex-shrink: 0; background: #3C4043;
+  clip-path: polygon(0 0, 42% 0, 52% 18%, 100% 18%, 100% 100%, 0 100%); border-radius: 1px;
+}
+.nw-table--acc .nw-tr { grid-template-columns: 1.1fr .7fr 2.2fr 1.2fr; }
+@media (max-width: 640px) { .nw-sum--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); } .nw-sum--3 b { font-size: 1.4rem; } }
