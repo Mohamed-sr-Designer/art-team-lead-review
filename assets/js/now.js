@@ -115,7 +115,7 @@
   function brochure(it) {
     var pages = '';
     for (var i = 1; i <= it.pages; i++) {
-      var src = A + 'print/' + it.id + '-' + i + '.webp';
+      var src = A + 'print/' + it.id + '-' + i + '.webp?v=2';
       pages += '<button class="nw-page" data-t="print" data-src="' + src + '" data-title="' + it.title + ' · page ' + i + '">' +
         '<img src="' + src + '" alt="' + it.title + ' page ' + i + '" width="1121" height="793" loading="lazy"><i>' + String(i).padStart(2, '0') + '</i></button>';
     }
