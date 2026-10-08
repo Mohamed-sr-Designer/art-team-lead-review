@@ -44,10 +44,11 @@
 .nw-link {
   display: inline-flex; align-items: center; gap: .4rem; font-size: .86rem; font-weight: 620;
   color: var(--nw-ink); border-bottom: 1.5px solid var(--nw-acc); padding-bottom: .1rem;
-  transition: gap .25s var(--ease), color .25s var(--ease);
+  transition: color .25s var(--ease);
 }
-.nw-link svg { width: 13px; height: 13px; }
-.nw-link:hover { gap: .65rem; color: var(--nw-acc-ink); }
+.nw-link svg { width: 13px; height: 13px; transition: transform .25s var(--ease); }
+.nw-link:hover { color: var(--nw-acc-ink); }
+.nw-link:hover svg { transform: translate(2px, -2px); }
 
 /* ---------- Opener ---------- */
 .nw-open {
@@ -80,9 +81,9 @@
 .nw-open__toc { list-style: none; border-top: 1px solid var(--nw-line-2); }
 .nw-open__toc a {
   display: flex; gap: 1rem; align-items: baseline; padding: .72rem 0; border-bottom: 1px solid var(--nw-line);
-  font-weight: 560; color: var(--nw-ink); transition: color .2s, padding .3s var(--ease);
+  font-weight: 560; color: var(--nw-ink); transition: color .2s;
 }
-.nw-open__toc a:hover { color: var(--nw-acc-ink); padding-inline-start: .4rem; }
+.nw-open__toc a:hover { color: var(--nw-acc-ink); }
 .nw-open__toc b { font-family: var(--font-mono); font-size: .74rem; color: var(--nw-acc-ink); font-weight: 600; }
 
 .nw-facts {
