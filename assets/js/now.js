@@ -199,28 +199,19 @@
 
   var workEl = $('nwWork'), indexEl = $('nwIndex');
   if (workEl && indexEl) {
-    var tot = { video: 0, social: 0, print: 0 };
-    indexEl.innerHTML =
-      '<div class="nw-tr nw-tr--head" role="row"><span role="columnheader">Client</span><span role="columnheader">Video</span><span role="columnheader">Social</span><span role="columnheader">Print</span><span role="columnheader">Total</span></div>' +
-      CLIENTS.map(function (c) {
-        var cells = TYPES.map(function (t) {
-          var n = countOf(c, t[0]); tot[t[0]] += n;
-          return '<span role="cell" data-l="' + t[1] + '">' + (n || '<span class="nw-muted">&middot;</span>') + '</span>';
-        }).join('');
-        return '<a class="nw-tr" role="row" href="#w-' + c.key + '" data-jump="' + c.key + '"><span role="cell" class="nw-td-k">' + c.name + '<small>' + c.sub + '</small></span>' + cells +
-          '<span role="cell" data-l="Total"><b>' + c.items.length + '</b></span></a>';
-      }).join('') +
-      '<div class="nw-tr nw-tr--foot" role="row"><span role="cell" class="nw-td-k">Total</span>' +
-      TYPES.map(function (t) { return '<span role="cell" data-l="' + t[1] + '">' + tot[t[0]] + '</span>'; }).join('') +
-      '<span role="cell" data-l="Total"><b>' + (tot.video + tot.social + tot.print) + '</b></span></div>';
+    // Client index: names and the kinds of work only (no counts; this is a selection)
+    indexEl.innerHTML = CLIENTS.map(function (c) {
+      var kinds = TYPES.filter(function (t) { return countOf(c, t[0]); })
+        .map(function (t) { return '<em class="nw-kind nw-kind--' + t[0] + '">' + t[1] + '</em>'; }).join('');
+      return '<a class="nw-cidx" href="#w-' + c.key + '" data-jump="' + c.key + '"><b>' + c.name + '</b><span>' + kinds + '</span><i aria-hidden="true">&rarr;</i></a>';
+    }).join('');
 
     workEl.innerHTML = CLIENTS.map(function (c) {
-      var meta = TYPES.filter(function (t) { return countOf(c, t[0]); })
-        .map(function (t) { var n = countOf(c, t[0]); return n + ' ' + (n > 1 ? t[2] : t[2].replace(/s$/, '')); }).join(' · ');
+      var meta = TYPES.filter(function (t) { return countOf(c, t[0]); }).map(function (t) { return t[1]; }).join(' · ');
       var groups = TYPES.map(function (t) {
         var items = c.items.filter(function (i) { return i.t === t[0]; });
         if (!items.length) return '';
-        return '<div class="nw-group" data-t="' + t[0] + '"><span class="nw-group__t">' + t[1] + ' <i>' + items.length + '</i></span>' +
+        return '<div class="nw-group" data-t="' + t[0] + '"><span class="nw-group__t">' + t[1] + '</span>' +
           (t[0] === 'print' ? items.map(brochure).join('') : '<div class="nw-grid">' + items.map(tile).join('') + '</div>') + '</div>';
       }).join('');
       return '<article class="nw-client" id="w-' + c.key + '" data-client="' + c.key + '" data-reveal>' +
@@ -231,11 +222,6 @@
       var b = e.target.closest('[data-src]'); if (!b) return;
       open(b.getAttribute('data-t') === 'video' ? 'video' : 'image', b.getAttribute('data-src'), b.getAttribute('data-title'));
     });
-
-    $('nwCountAll').textContent = tot.video + tot.social + tot.print;
-    $('nwCountVideo').textContent = tot.video;
-    $('nwCountSocial').textContent = tot.social;
-    $('nwCountPrint').textContent = tot.print;
 
     var btns = document.querySelectorAll('.nw-filter button');
     var applyFilter = function (f) {
