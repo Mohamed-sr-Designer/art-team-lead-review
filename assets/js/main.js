@@ -500,6 +500,8 @@
     lb.querySelector('.lb__close').focus();
   }
 
+  window.openMedia = openMedia;
+
   function closeLightbox() {
     if (!lb) return;
     var v = lb.querySelector('.lb__solo video');
