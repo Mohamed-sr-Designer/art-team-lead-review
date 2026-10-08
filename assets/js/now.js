@@ -286,7 +286,56 @@
     }).join('');
   }
 
-  /* ---------- 5 · Chapter rail: highlight the section in view ---------- */
+  /* ---------- 5 · Before I came vs now: two auto-looping rows ---------- */
+  var PAIRS = { 'alrajhi-rabia': 6, 'gf': 6, 'bassem-ragab': 4, 'alrajhi-alrawda': 3, 'the-hub': 3, 'abaq': 3,
+    'alrajhi-rabiet-elghad': 3, 'boxaway': 3, 'dora': 3, 'ihs': 3, 'riad-elabdaa': 3, 'umi': 3 };
+  function loopRow(el, items, reverse) {
+    if (!el || !items.length) return;
+    var html = items.map(function (it) {
+      return '<button type="button" class="nw-bn__item' + (it.video ? ' is-video' : '') + '" data-src="' + it.full + '" data-title="' + it.title + '">' +
+        '<img src="' + it.src + '" alt="' + it.title + '" loading="lazy" decoding="async">' +
+        (it.video ? '<span class="nw-bn__play">' + PLAY + '</span>' : '') + '</button>';
+    }).join('');
+    // Two copies side by side; the track moves by exactly one copy, so the loop is seamless
+    el.innerHTML = '<div class="nw-bn__set">' + html + '</div><div class="nw-bn__set" aria-hidden="true">' + html + '</div>';
+    el.style.setProperty('--nw-bn-dur', Math.max(40, items.length * 4.2) + 's');
+    if (reverse) el.classList.add('is-reverse');
+    el.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-src]'); if (!b) return;
+      open(b.classList.contains('is-video') ? 'video' : 'image', b.getAttribute('data-src'), b.getAttribute('data-title'));
+    });
+  }
+  // Before: interleave accounts so the row never shows one client for long
+  var before = [], maxN = 6;
+  for (var n = 1; n <= maxN; n++) {
+    Object.keys(PAIRS).forEach(function (slug) {
+      if (n <= PAIRS[slug]) {
+        var src = 'assets/work/' + slug + '/before-' + n + '.webp';
+        before.push({ src: src, full: src, title: 'Before I joined' });
+      }
+    });
+  }
+  // Now: the latest work, mixing posts, brochure covers and film frames
+  var nowItems = [];
+  var social = [], films = [], covers = [];
+  CLIENTS.forEach(function (c) {
+    c.items.forEach(function (it) {
+      if (it.t === 'social') social.push({ src: A + 'gallery/' + it.id + '.webp', full: A + 'gallery/' + it.id + '.webp', title: 'Now · ' + it.title });
+      if (it.t === 'video' && it.id !== 'nahl-v3') films.push({ src: A + 'gallery/' + it.id + '.jpg', full: A + 'gallery/' + it.id + '.mp4', title: 'Now · ' + it.title, video: true });
+      if (it.t === 'print') covers.push({ src: A + 'print/' + it.id + '-1.webp?v=2', full: A + 'print/' + it.id + '-1.webp?v=2', title: 'Now · ' + it.title });
+    });
+  });
+  var pi = 0;
+  while (social.length || films.length || covers.length) {
+    // roughly two posts, then a film, then a cover
+    var pick = [social, social, films, social, covers][pi++ % 5];
+    var it = pick.shift() || social.shift() || films.shift() || covers.shift();
+    if (it) nowItems.push(it);
+  }
+  loopRow($('nwBefore'), before, false);
+  loopRow($('nwNow'), nowItems, true);
+
+  /* ---------- 6 · Chapter rail: highlight the section in view ---------- */
   var rail = document.querySelector('.nw-rail ol');
   var railLinks = Array.prototype.slice.call(document.querySelectorAll('.nw-rail a'));
   var blocks = railLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);

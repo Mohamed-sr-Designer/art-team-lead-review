@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,300..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/now.css?v=11">
+<link rel="stylesheet" href="assets/css/now.css?v=12">
 </head>
 <body>
 
@@ -1019,7 +1019,8 @@
         <li><a href="#n-accounts"><i>05</i> New accounts</a></li>
         <li><a href="#n-work"><i>06</i> The work</a></li>
         <li><a href="#n-sites"><i>07</i> Landing pages</a></li>
-        <li><a href="#n-close"><i>08</i> Where we are</a></li>
+        <li><a href="#n-compare"><i>08</i> Before and now</a></li>
+        <li><a href="#n-close"><i>09</i> Where we are</a></li>
       </ol>
     </nav>
 
@@ -1243,10 +1244,33 @@
         <div id="nwSites"></div>
       </section>
 
+      <!-- ============ 08 · BEFORE / NOW ============ -->
+      <section class="nw-block nw-bn-block" id="n-compare">
+        <div class="nw-head" data-reveal>
+          <span class="nw-num">08</span>
+          <div>
+            <h2>Before I came, and now.</h2>
+            <p>A quick look at the difference. The top row is the company's design work before I joined. The bottom row is the latest work from the team. Same company, same kind of clients. Hover to pause, click any design to see it big.</p>
+          </div>
+        </div>
+
+        <div class="nw-bn" data-reveal>
+          <div class="nw-bn__row nw-bn__row--before">
+            <span class="nw-bn__tag">Before I joined</span>
+            <div class="nw-bn__track" id="nwBefore"></div>
+          </div>
+          <div class="nw-bn__mid" aria-hidden="true"><i></i><span>Same company · new standard</span><i></i></div>
+          <div class="nw-bn__row nw-bn__row--now">
+            <span class="nw-bn__tag nw-bn__tag--now">Now</span>
+            <div class="nw-bn__track" id="nwNow"></div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ 08 · CLOSE ============ -->
       <section class="nw-block nw-end" id="n-close">
         <div class="nw-head" data-reveal>
-          <span class="nw-num">08</span>
+          <span class="nw-num">09</span>
           <div>
             <h2>Better at every step.</h2>
             <p>Nothing here happened in one jump. Each part moved forward in stages, and each stage held.</p>
@@ -1292,7 +1316,7 @@
   </div>
 </footer>
 
-<script src="assets/js/now.js?v=8"></script>
+<script src="assets/js/now.js?v=9"></script>
 <script src="assets/js/main.js?v=2"></script>
 </body>
 </html>
