@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-08T22:49:59.621Z",
+        "reason": "user confirmed: asked for auto-looping before/after sliders in Chapter 02 section 08"
+      }
+    ]
+  }
+}

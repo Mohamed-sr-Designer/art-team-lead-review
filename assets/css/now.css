@@ -473,7 +473,8 @@ a.nw-tr:hover { background: #FFF6EE; }
   position: relative; flex: 0 0 auto; height: clamp(170px, 22vw, 270px); padding: 0; border: 0; border-radius: 10px;
   overflow: hidden; cursor: zoom-in; background: #1B2A3E; transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
-.nw-bn__item img { height: 100%; width: auto; display: block; }
+.nw-bn__item { aspect-ratio: 4 / 5; }
+.nw-bn__item img { height: 100%; width: 100%; object-fit: cover; display: block; }
 .nw-bn__item:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .6); }
 .nw-bn__row--before .nw-bn__item img { filter: saturate(.85); }
 .nw-bn__item.is-video { cursor: pointer; }

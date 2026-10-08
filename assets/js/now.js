@@ -287,8 +287,8 @@
   }
 
   /* ---------- 5 · Before I came vs now: two auto-looping rows ---------- */
-  var PAIRS = { 'alrajhi-rabia': 6, 'gf': 6, 'bassem-ragab': 4, 'alrajhi-alrawda': 3, 'the-hub': 3, 'abaq': 3,
-    'alrajhi-rabiet-elghad': 3, 'boxaway': 3, 'dora': 3, 'ihs': 3, 'riad-elabdaa': 3, 'umi': 3 };
+  // Hand-picked social posts only. Before: the weakest of the company's posts
+  // before I joined. Now: the strongest posts from the team since then.
   function loopRow(el, items, reverse) {
     if (!el || !items.length) return;
     var html = items.map(function (it) {
@@ -305,33 +305,20 @@
       open(b.classList.contains('is-video') ? 'video' : 'image', b.getAttribute('data-src'), b.getAttribute('data-title'));
     });
   }
-  // Before: interleave accounts so the row never shows one client for long
-  var before = [], maxN = 6;
-  for (var n = 1; n <= maxN; n++) {
-    Object.keys(PAIRS).forEach(function (slug) {
-      if (n <= PAIRS[slug]) {
-        var src = 'assets/work/' + slug + '/before-' + n + '.webp';
-        before.push({ src: src, full: src, title: 'Before I joined' });
-      }
-    });
-  }
-  // Now: the latest work, mixing posts, brochure covers and film frames
-  var nowItems = [];
-  var social = [], films = [], covers = [];
-  CLIENTS.forEach(function (c) {
-    c.items.forEach(function (it) {
-      if (it.t === 'social') social.push({ src: A + 'gallery/' + it.id + '.webp', full: A + 'gallery/' + it.id + '.webp', title: 'Now · ' + it.title });
-      if (it.t === 'video' && it.id !== 'nahl-v3') films.push({ src: A + 'gallery/' + it.id + '.jpg', full: A + 'gallery/' + it.id + '.mp4', title: 'Now · ' + it.title, video: true });
-      if (it.t === 'print') covers.push({ src: A + 'print/' + it.id + '-1.webp?v=2', full: A + 'print/' + it.id + '-1.webp?v=2', title: 'Now · ' + it.title });
-    });
+  var BEFORE = ['abaq/before-1', 'gf/before-4', 'umi/before-1', 'alrajhi-alrawda/before-2', 'ihs/before-3', 'dora/before-2',
+    'bassem-ragab/before-2', 'riad-elabdaa/before-2', 'abaq/before-2', 'alrajhi-rabia/before-6', 'gf/before-1', 'the-hub/before-1',
+    'umi/before-2', 'dora/before-3', 'alrajhi-rabiet-elghad/before-1', 'ihs/before-2', 'bassem-ragab/before-3', 'riad-elabdaa/before-3',
+    'abaq/before-3', 'alrajhi-alrawda/before-3', 'gf/before-5', 'umi/before-3'];
+  var NOW = ['g:boxaway-2', 'w:abaq/after-3', 'g:hub-2', 'g:nahl-1', 'w:alrajhi-alrawda/after-2', 'g:shield-2', 'g:boxaway-1',
+    'w:gf/after-5', 'g:hrlink-3', 'w:the-hub/after-2', 'g:nahl-4', 'w:dora/after-2', 'g:boxaway-4', 'g:bbm-2',
+    'w:bassem-ragab/after-3', 'g:hub-1', 'w:abaq/after-2', 'g:shield-1', 'w:boxaway/after-2', 'g:nahl-2',
+    'w:alrajhi-rabiet-elghad/after-1', 'g:hrlink-1', 'w:riad-elabdaa/after-2', 'g:boxaway-3', 'w:gf/after-6', 'g:hub-3',
+    'w:alrajhi-alrawda/after-3', 'g:hrpath-2', 'w:ihs/after-1', 'w:boxaway/after-1'];
+  var before = BEFORE.map(function (p) { var src = 'assets/work/' + p + '.webp'; return { src: src, full: src, title: 'Before I joined' }; });
+  var nowItems = NOW.map(function (k) {
+    var src = k.charAt(0) === 'g' ? A + 'gallery/' + k.slice(2) + '.webp' : 'assets/work/' + k.slice(2) + '.webp';
+    return { src: src, full: src, title: 'Now' };
   });
-  var pi = 0;
-  while (social.length || films.length || covers.length) {
-    // roughly two posts, then a film, then a cover
-    var pick = [social, social, films, social, covers][pi++ % 5];
-    var it = pick.shift() || social.shift() || films.shift() || covers.shift();
-    if (it) nowItems.push(it);
-  }
   loopRow($('nwBefore'), before, false);
   loopRow($('nwNow'), nowItems, true);
 
